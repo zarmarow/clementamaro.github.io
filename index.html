@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clément Amaro | Designer Produit</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Polices Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">CA<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects-produit">Projets Produit</a></li>
+                <li><a href="#projects-3d">Parcours 3D</a></li>
+                <li><a href="#projects-foxtrot">Foxtrot</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-tag reveal">Disponible immédiatement — CDD / CDI</div>
+            <h1 class="reveal">Clément <span>Amaro</span></h1>
+            <p class="subtitle reveal">Designer Produit & Industriel</p>
+            <p class="description reveal">Designer polyvalent, ma démarche est centrée sur le Design Produit, avec une approche rigoureuse qui lie la performance technique à l'excellence esthétique. Du concept à l'objet réel : CAO, NURBS, prototypage physique et rendu photoréaliste.</p>
+            <div class="hero-buttons reveal">
+                <a href="#projects-produit" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee (Bandeau défilant) -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span>Design Produit</span><span>CAO & NURBS</span><span>Rendu Photoréaliste</span><span>Prototypage Physique</span><span>UX/UI</span><span>Contraintes de Fabrication</span>
+            <span>Design Produit</span><span>CAO & NURBS</span><span>Rendu Photoréaliste</span><span>Prototypage Physique</span><span>UX/UI</span><span>Contraintes de Fabrication</span>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-num">(01) — À PROPOS</span>
+                <h2 class="section-title">Du temps réel<br><em>au produit réel.</em></h2>
+            </div>
+            <div class="about-content reveal">
+                <div class="about-text">
+                    <p>Designer produit, je conçois de l'idée à l'objet réel : du sketch à la maquette physique, en passant par la modélisation 3D et la CAO. Mon terrain de prédilection, c'est l'équipement et les produits techniques.</p>
+                    <p><strong>Ma polyvalence est mon atout majeur.</strong> Issu d'un Master en 3D Temps Réel, je maîtrise la chaîne de production numérique. Je l'applique désormais au monde physique avec Rhino et Fusion 360, en intégrant les contraintes de production.</p>
+                    
+                    <div class="reorientation-box">
+                        <h3>Une transition stratégique</h3>
+                        <p>Je transpose mon expertise technique du jeu vidéo vers le design industriel. Là où l'IA génère des images, je me concentre sur ce qui compte vraiment : <strong>la faisabilité, les matériaux et la confrontation au physique</strong>.</p>
+                    </div>
+                </div>
+                <ul class="skills-list">
+                    <li><span>Conception & Idéation</span><span class="num">/01</span></li>
+                    <li><span>Modélisation NURBS & Mesh</span><span class="num">/02</span></li>
+                    <li><span>Rendu Photoréaliste</span><span class="num">/03</span></li>
+                    <li><span>Prototypage & Fabrication</span><span class="num">/04</span></li>
+                    <li><span>UX/UI & Visualisation</span><span class="num">/05</span></li>
+                    <li><span>Gestion de Projet</span><span class="num">/06</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Produit Section -->
+    <section id="projects-produit" class="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-num">(02) — PROJETS PRODUIT</span>
+                <h2 class="section-title">Conceptions<br><em>tangibles.</em></h2>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Ébénisterie -->
+                <article class="project-card reveal" data-modal="modal-ebenisterie">
+                    <div class="project-image" style="background-image: url('images/Ebenisterie.jpg');">
+                        <div class="overlay">
+                            <span class="view-project">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category">Design Produit — Fabrication</div>
+                        <h3>Ébénisterie</h3>
+                        <p>Conception et fabrication d'un meuble, de la modélisation à l'assemblage final.</p>
+                        <div class="tags">
+                            <span>Fusion 360</span>
+                            <span>Fabrication bois</span>
+                            <span>Plans techniques</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Food Dispenser -->
+                <article class="project-card reveal" data-modal="modal-dispenser">
+                    <div class="project-image" style="background-image: url('images/FoodDispenser.png');">
+                        <div class="overlay">
+                            <span class="view-project">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category">Design Produit — Blue Stinger Remake</div>
+                        <h3>Food Dispenser</h3>
+                        <p>Modélisation d'un objet produit, de la recherche de références au texturing final.</p>
+                        <div class="tags">
+                            <span>Hard Surface</span>
+                            <span>Blender</span>
+                            <span>PBR</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Rendu d'espace -->
+                <article class="project-card reveal" data-modal="modal-espace">
+                    <div class="project-image" style="background-image: url('images/RenduPhotorealiste.png');">
+                        <div class="overlay">
+                            <span class="view-project">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category">Design d'Intérieur</div>
+                        <h3>Rendu d'espace</h3>
+                        <p>Conception d'un espace et rendu photoréaliste : mobilier, agencement, lumière.</p>
+                        <div class="tags">
+                            <span>Blender</span>
+                            <span>Rendu photoréaliste</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Parcours 3D Section (hors Foxtrot) -->
+    <section id="projects-3d" class="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-num">(03) — PARCOURS 3D</span>
+                <h2 class="section-title">Créations<br><em>numériques.</em></h2>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Crypte Sainte-Catherine -->
+                <article class="project-card reveal" data-modal="modal-crypte">
+                    <div class="project-image" style="background-image: url('images/Crypte-Render.jpg');">
+                        <div class="overlay">
+                            <span class="view-project">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category">Patrimoine & VR — 2025</div>
+                        <h3>Crypte Sainte-Catherine</h3>
+                        <p>Visite virtuelle VR de Tonnerre avec photogrammétrie et optimisation.</p>
+                        <div class="tags">
+                            <span>Photogrammétrie</span>
+                            <span>VR</span>
+                            <span>Optimisation</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sculpting Organique -->
+                <article class="project-card reveal" data-modal="modal-mushroom">
+                    <div class="project-image" style="background-image: url('images/Mushroom-04.jpg');">
+                        <div class="overlay">
+                            <span class="view-project">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category">Exercice — 2024</div>
+                        <h3>Sculpting Organique</h3>
+                        <p>Sculpting de champignon sur ZBrush avec itérations Dynamesh progressives.</p>
+                        <div class="tags">
+                            <span>ZBrush</span>
+                            <span>Dynamesh</span>
+                            <span>Organic</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Dogs Bower -->
+                <article class="project-card reveal" data-modal="modal-character">
+                    <div class="project-image" style="background-image: url('images/DogsBower-ZbrushOutfit-Front.png');">
+                        <div class="overlay">
+                            <span class="view-project">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category">Jeu Vidéo · Blue Stinger Remake — 2024</div>
+                        <h3>Personnage "Dogs Bower"</h3>
+                        <p>Création complète de personnage avec Character Creator, Marvelous Designer, Blender.</p>
+                        <div class="tags">
+                            <span>Character</span>
+                            <span>ZBrush</span>
+                            <span>Substance</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Foxtrot Section -->
+    <section id="projects-foxtrot" class="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-num">(04) — PROJET FOXTROT</span>
+                <h2 class="section-title">Metaverse<br><em>& Innovation.</em></h2>
+            </div>
+            <div class="projects-grid">
+
+                <!-- MK18 -->
+                <article class="project-card reveal" data-modal="modal-mk18">
+                    <div class="project-image" style="background-image: url('images/Foxtrot-MK18-Render.png');">
+                        <div class="overlay">
+                            <span class="view-project">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category">Metaverse · Foxtrot — 2023-2025</div>
+                        <h3>MK18 Modulaire</h3>
+                        <p>Arme entièrement conçue sur Blender avec structure modulaire pour personnalisation.</p>
+                        <div class="tags">
+                            <span>Blender</span>
+                            <span>Modularité</span>
+                            <span>Texturing</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Smart Materials -->
+                <article class="project-card reveal" data-modal="modal-smartmat">
+                    <div class="project-image" style="background-image: url('images/Foxtrot-Pouches.png');">
+                        <div class="overlay">
+                            <span class="view-project">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category">Metaverse · Foxtrot — 2023-2025</div>
+                        <h3>Smart Materials</h3>
+                        <p>Bibliothèque de matériaux intelligents pour accélérer le texturing des assets.</p>
+                        <div class="tags">
+                            <span>Substance</span>
+                            <span>Workflow</span>
+                            <span>Optimisation</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Avatar -->
+                <article class="project-card reveal" data-modal="modal-avatar">
+                    <div class="project-image" style="background-image: url('images/Foxtrot-Avatars-Render.png');">
+                        <div class="overlay">
+                            <span class="view-project">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category">Metaverse · Foxtrot — 2023-2025</div>
+                        <h3>Avatar Customizable</h3>
+                        <p>Modélisation low poly d'un avatar 3D avec parties personnalisables, optimisé mobile.</p>
+                        <div class="tags">
+                            <span>Low Poly</span>
+                            <span>Baking</span>
+                            <span>Mobile</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- UX/UI Design -->
+                <article class="project-card reveal" data-modal="modal-uxui">
+                    <div class="project-image" style="background-image: url('images/Foxtrot-Socials.png');">
+                        <div class="overlay">
+                            <span class="view-project">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category">Metaverse · Foxtrot — 2023-2025</div>
+                        <h3>UX/UI Design</h3>
+                        <p>Conception complète de l'interface sur Figma : navigation fluide et responsive.</p>
+                        <div class="tags">
+                            <span>Figma</span>
+                            <span>Wireframing</span>
+                            <span>Mobile</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Marketing Assets -->
+                <article class="project-card reveal" data-modal="modal-marketing">
+                    <div class="project-image" style="background-image: url('images/Foxtrot-Rooms.png');">
+                        <div class="overlay">
+                            <span class="view-project">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category">Metaverse · Foxtrot — 2023-2025</div>
+                        <h3>Assets Marketing</h3>
+                        <p>Création d'assets pour la campagne Kickstarter et les réseaux sociaux.</p>
+                        <div class="tags">
+                            <span>Figma</span>
+                            <span>Kickstarter</span>
+                            <span>Social Media</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-num">(05) — CONTACT</span>
+                <h2 class="section-title">Parlons de<br><em>votre projet.</em></h2>
+            </div>
+            <div class="contact-content reveal">
+                <p class="contact-cta">Intéressé par une collaboration ou vous souhaitez en savoir plus sur mes projets ? N'hésitez pas à me contacter !</p>
+                <div class="contact-links">
+                    <a href="mailto:contact@clementamaro.com" class="contact-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        Envoyer un email
+                    </a>
+                    <a href="#" class="contact-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="#" class="contact-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.481 1.236-3.36-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.879 1.235 2.049 1.235 3.36 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Clément Amaro. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- MODALS (Structure simplifiée pour l'exemple) -->
+    <!-- ============================================ -->
+    
+    <!-- Modal Ébénisterie -->
+    <div id="modal-ebenisterie" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-ebenisterie')">&times;</button>
+            <div class="modal-header">
+                <div class="cat">Design Produit — Fabrication</div>
+                <h2>Ébénisterie</h2>
+                <p>Conception et fabrication d'un meuble en appliquant un processus alliant design et réalisation concrète.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-image" style="background-image: url('images/Ebenisterie.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="modal-details">
+                        <h3>Étapes clés</h3>
+                        <ul>
+                            <li>Conception d'un design fonctionnel et esthétique</li>
+                            <li>Réalisation de plans techniques détaillés</li>
+                            <li>Sélection des matériaux et techniques d'assemblage</li>
+                            <li>Fabrication et finition du meuble</li>
+                        </ul>
+                        <h3>Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Fusion 360</span>
+                            <span>Fabrication bois</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Food Dispenser -->
+    <div id="modal-dispenser" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-dispenser')">&times;</button>
+            <div class="modal-header">
+                <div class="cat">Design Produit — Blue Stinger Remake</div>
+                <h2>Food Dispenser</h2>
+                <p>Création d'un distributeur pour le remake de Blue Stinger, avec un processus détaillé pour garantir un modèle réaliste.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-image" style="background-image: url('images/FoodDispenser.png'); background-size: cover; background-position: center;"></div>
+                    <div class="modal-details">
+                        <h3>Étapes clés</h3>
+                        <ul>
+                            <li>Recherche de références & respect de la direction artistique</li>
+                            <li>Modélisation high poly</li>
+                            <li>Low poly & UV</li>
+                            <li>Texturing</li>
+                        </ul>
+                        <h3>Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Blender</span>
+                            <span>Substance Painter</span>
+                            <span>Unity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Rendu d'espace -->
+    <div id="modal-espace" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-espace')">&times;</button>
+            <div class="modal-header">
+                <div class="cat">Design d'Intérieur</div>
+                <h2>Rendu d'espace</h2>
+                <p>Conception d'un espace et réalisation d'un rendu photoréaliste.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-image" style="background-image: url('images/RenduPhotorealiste.png'); background-size: cover; background-position: center;"></div>
+                    <div class="modal-details">
+                        <h3>Étapes clés</h3>
+                        <ul>
+                            <li>Conception d'un espace fonctionnel et esthétique</li>
+                            <li>Modélisation 3D détaillée des éléments</li>
+                            <li>Mise en lumière et texturage pour un réalisme accru</li>
+                            <li>Réalisation du rendu photoréaliste final</li>
+                        </ul>
+                        <h3>Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Blender</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Crypte -->
+    <div id="modal-crypte" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-crypte')">&times;</button>
+            <div class="modal-header">
+                <div class="cat">Patrimoine & VR — 2025</div>
+                <h2>Crypte Sainte-Catherine</h2>
+                <p>Visite virtuelle en VR de la Crypte Sainte-Catherine à Tonnerre.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-image" style="background-image: url('images/Crypte-Render.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="modal-details">
+                        <h3>Étapes clés</h3>
+                        <ul>
+                            <li>Photogrammétrie</li>
+                            <li>Modélisation</li>
+                            <li>Baking des textures</li>
+                            <li>Rattrapage des textures avec Photoshop</li>
+                        </ul>
+                        <h3>Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Photoshop</span>
+                            <span>3ds Max</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Mushroom -->
+    <div id="modal-mushroom" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-mushroom')">&times;</button>
+            <div class="modal-header">
+                <div class="cat">Exercice — 2024</div>
+                <h2>Sculpting Organique</h2>
+                <p>Exercice de sculpting d'un champignon sur ZBrush.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-image" style="background-image: url('images/Mushroom-01.jpg'); background-size: cover; background-position: center;"></div>
+                    <div class="modal-details">
+                        <h3>Étapes clés</h3>
+                        <ul>
+                            <li>Recherche de références</li>
+                            <li>Modélisation high poly avec Dynamesh</li>
+                            <li>Affinage des formes et détails</li>
+                        </ul>
+                        <h3>Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>ZBrush</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Character Dogs Bower -->
+    <div id="modal-character" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-character')">&times;</button>
+            <div class="modal-header">
+                <div class="cat">Jeu Vidéo · Blue Stinger Remake — 2024</div>
+                <h2>Personnage "Dogs Bower"</h2>
+                <p>Création complète de personnage dans le remake de Blue Stinger.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-image" style="background-image: url('images/DogsBower-MarvelousDesigner.png'); background-size: cover; background-position: center;"></div>
+                    <div class="modal-details">
+                        <h3>Étapes clés</h3>
+                        <ul>
+                            <li>Character Creator</li>
+                            <li>Marvelous Designer</li>
+                            <li>Blender</li>
+                            <li>ZBrush</li>
+                            <li>Substance Painter</li>
+                        </ul>
+                        <h3>Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Character</span>
+                            <span>ZBrush</span>
+                            <span>Substance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal MK18 -->
+    <div id="modal-mk18" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-mk18')">&times;</button>
+            <div class="modal-header">
+                <div class="cat">Metaverse · Foxtrot — 2023-2025</div>
+                <h2>MK18 Modulaire</h2>
+                <p>Arme entièrement conçue sur Blender avec structure modulaire.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-image" style="background-image: url('images/Foxtrot-MK18-Dismantled.png'); background-size: cover; background-position: center;"></div>
+                    <div class="modal-details">
+                        <h3>Caractéristiques</h3>
+                        <ul>
+                            <li>Modélisation optimisée</li>
+                            <li>Modularité</li>
+                            <li>Texturing réaliste</li>
+                        </ul>
+                        <h3>Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Blender</span>
+                            <span>Substance Painter</span>
+                            <span>Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Smart Materials -->
+    <div id="modal-smartmat" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-smartmat')">&times;</button>
+            <div class="modal-header">
+                <div class="cat">Metaverse · Foxtrot — 2023-2025</div>
+                <h2>Smart Materials</h2>
+                <p>Conception de Smart Materials spécifiquement pour Foxtrot.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-image" style="background-image: url('images/Foxtrot-Pouches.png'); background-size: cover; background-position: center;"></div>
+                    <div class="modal-details">
+                        <h3>Bénéfices</h3>
+                        <ul>
+                            <li>Gain de temps</li>
+                            <li>Précision</li>
+                            <li>Polyvalence</li>
+                        </ul>
+                        <h3>Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Substance Painter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Avatar -->
+    <div id="modal-avatar" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-avatar')">&times;</button>
+            <div class="modal-header">
+                <div class="cat">Metaverse · Foxtrot — 2023-2025</div>
+                <h2>Avatar Customizable</h2>
+                <p>Modélisation lowpoly d'un avatar 3D avec parties personnalisables.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-image" style="background-image: url('images/Foxtrot-Avatars-Mesh.png'); background-size: cover; background-position: center;"></div>
+                    <div class="modal-details">
+                        <h3>Étapes clés</h3>
+                        <ul>
+                            <li>Modélisation lowpoly</li>
+                            <li>Baking des textures</li>
+                            <li>Optimisation mobile</li>
+                            <li>Parties personnalisables</li>
+                        </ul>
+                        <h3>Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Photoshop</span>
+                            <span>Blender</span>
+                            <span>Unity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal UX/UI -->
+    <div id="modal-uxui" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-uxui')">&times;</button>
+            <div class="modal-header">
+                <div class="cat">Metaverse · Foxtrot — 2023-2025</div>
+                <h2>UX/UI Design</h2>
+                <p>Conception de l'interface utilisateur sur Figma.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-image" style="background-image: url('images/Foxtrot-Socials.png'); background-size: cover; background-position: center;"></div>
+                    <div class="modal-details">
+                        <h3>Étapes clés</h3>
+                        <ul>
+                            <li>Wireframing & prototypage sur Figma</li>
+                            <li>Optimisation UX/UI pour une utilisation intuitive</li>
+                            <li>Design responsive adapté aux contraintes mobiles</li>
+                            <li>Identité visuelle cohérente avec la cible</li>
+                        </ul>
+                        <h3>Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Figma</span>
+                            <span>Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Marketing -->
+    <div id="modal-marketing" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-marketing')">&times;</button>
+            <div class="modal-header">
+                <div class="cat">Metaverse · Foxtrot — 2023-2025</div>
+                <h2>Assets Marketing</h2>
+                <p>Conception d'assets marketing pour Instagram et Kickstarter.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-image" style="background-image: url('images/Foxtrot-Rooms.png'); background-size: cover; background-position: center;"></div>
+                    <div class="modal-details">
+                        <h3>Étapes clés</h3>
+                        <ul>
+                            <li>Respect d'un planning marketing</li>
+                            <li>Posts & stories pour la campagne Kickstarter</li>
+                            <li>Assets expliquant les différentes fonctionnalités</li>
+                            <li>Cohérence visuelle & branding</li>
+                        </ul>
+                        <h3>Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Figma</span>
+                            <span>Kickstarter</span>
+                            <span>Social Media</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
