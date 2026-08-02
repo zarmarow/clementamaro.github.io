@@ -79,6 +79,23 @@ h2 em { font-style: italic; color: var(--muted); }
     width: 25px; height: 3px; background: var(--ink); transition: 0.3s;
 }
 
+/* Lang Switch */
+.lang-switch {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 13px; font-weight: 600; letter-spacing: 1px;
+    margin-left: 8px;
+}
+.lang-switch button {
+    background: none; border: none; cursor: pointer;
+    color: var(--muted); opacity: 0.6;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px; font-weight: 600; letter-spacing: 1px;
+    padding: 4px 6px; transition: opacity 0.3s, color 0.3s;
+}
+.lang-switch button.active { color: var(--ink); opacity: 1; }
+.lang-switch button:hover { opacity: 1; color: var(--accent); }
+.lang-switch .sep { color: var(--line); opacity: 0.6; }
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -258,6 +275,56 @@ section { padding: 120px 40px; }
     color: var(--muted);
 }
 
+/* Confidential Placeholder (Safran) */
+.project-image.confidential {
+    background: repeating-linear-gradient(
+        135deg,
+        var(--ink),
+        var(--ink) 12px,
+        #1a1a1a 12px,
+        #1a1a1a 24px
+    );
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+}
+.project-image.confidential .lock-label {
+    color: var(--accent);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px; text-transform: uppercase; letter-spacing: 3px;
+    border: 1px solid var(--accent);
+    padding: 10px 18px;
+    border-radius: 100px;
+    background: rgba(14,14,14,0.5);
+    display: flex; align-items: center; gap: 8px;
+    z-index: 2;
+}
+
+/* Sub-projects inside a mega-project modal (Foxtrot) */
+.subproject-nav {
+    display: flex; gap: 10px; flex-wrap: wrap;
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 24px;
+}
+.subproject-btn {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px; text-transform: uppercase; letter-spacing: 1px;
+    padding: 10px 18px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.subproject-btn:hover { color: var(--ink); border-color: var(--ink); }
+.subproject-btn.active {
+    background: var(--ink); color: var(--bg); border-color: var(--ink);
+}
+
+.subproject-panel { display: none; }
+.subproject-panel.active { display: block; animation: fadeIn 0.3s ease; }
+
 /* Contact Section */
 .contact {
     text-align: center;
@@ -395,6 +462,86 @@ section { padding: 120px 40px; }
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 .reveal.active { opacity: 1; transform: translateY(0); }
+
+/* Lang Switch */
+.lang-switch {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 13px; letter-spacing: 1px; color: var(--ink);
+    margin-left: 12px;
+}
+.lang-switch button {
+    background: none; border: none; cursor: pointer;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px; letter-spacing: 1px;
+    color: var(--muted); opacity: 0.6;
+    padding: 4px 6px; transition: all 0.3s;
+    text-transform: uppercase;
+}
+.lang-switch button.active {
+    color: var(--ink); opacity: 1; font-weight: 600;
+}
+.lang-switch button:hover { opacity: 1; color: var(--accent); }
+.lang-switch .sep { color: var(--muted); opacity: 0.4; font-size: 12px; }
+
+@media (max-width: 900px) {
+    .lang-switch { margin: 20px 0 0; justify-content: center; }
+}
+
+/* Confidential Placeholder (Safran) */
+.project-image.confidential {
+    background: repeating-linear-gradient(
+        135deg,
+        var(--ink),
+        var(--ink) 12px,
+        #1c1c1c 12px,
+        #1c1c1c 24px
+    );
+    display: flex; align-items: center; justify-content: center;
+}
+.confidential-mark {
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    color: var(--bg); opacity: 0.85;
+}
+.confidential-mark svg { width: 32px; height: 32px; stroke: var(--accent); }
+.confidential-mark span {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 2px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.modal-image.confidential {
+    background: repeating-linear-gradient(
+        135deg,
+        var(--ink),
+        var(--ink) 12px,
+        #1c1c1c 12px,
+        #1c1c1c 24px
+    );
+    display: flex; align-items: center; justify-content: center;
+}
+.modal-image.confidential .confidential-mark svg { width: 44px; height: 44px; }
+
+/* Mega-project sub-items (Foxtrot) */
+.subprojects-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px; margin-top: 16px;
+}
+.subproject-item {
+    display: flex; flex-direction: column; gap: 12px;
+    cursor: pointer; padding: 16px;
+    border: 1px solid var(--line); border-radius: 4px;
+    transition: border-color 0.3s, background 0.3s;
+}
+.subproject-item:hover { border-color: var(--accent); background: rgba(212,255,58,0.06); }
+.subproject-thumb {
+    aspect-ratio: 4/3; border-radius: 3px; background-size: cover; background-position: center;
+    background-color: var(--ink);
+}
+.subproject-item h4 {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 15px; color: var(--ink);
+}
+.subproject-item p { font-size: 13px; color: var(--muted); line-height: 1.4; }
+
+.mega-project-header { margin-bottom: 8px; }
+.mega-project-header p.mega-desc { color: var(--muted); font-size: 15px; line-height: 1.6; margin-bottom: 4px; }
 
 /* Responsive */
 @media (max-width: 900px) {

@@ -1,5 +1,48 @@
+// ============================================
+// I18N — Système de traduction FR/EN
+// ============================================
+function applyLanguage(lang) {
+    if (!window.translations || !translations[lang]) return;
+    const dict = translations[lang];
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key] !== undefined) {
+            el.textContent = dict[key];
+        }
+    });
+
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (dict[key] !== undefined) {
+            el.innerHTML = dict[key];
+        }
+    });
+
+    document.documentElement.lang = lang;
+    localStorage.setItem('portfolio-lang', lang);
+
+    document.querySelectorAll('.lang-switch button').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+}
+
+function initLanguageSwitch() {
+    const buttons = document.querySelectorAll('.lang-switch button');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            applyLanguage(btn.getAttribute('data-lang'));
+        });
+    });
+
+    const saved = localStorage.getItem('portfolio-lang');
+    const initial = (saved === 'en' || saved === 'fr') ? saved : 'fr';
+    applyLanguage(initial);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    
+    initLanguageSwitch();
+
     // Mobile Menu Toggle
     const menuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
@@ -112,9 +155,10 @@ function closeModal(modalId) {
     }
 }
 
-// Attacher les événements click aux cartes projets
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('click', function() {
+// Attacher les événements click aux cartes projets et aux sous-projets (mega-projet Foxtrot)
+document.querySelectorAll('.project-card[data-modal], .subproject-item[data-modal]').forEach(card => {
+    card.addEventListener('click', function(e) {
+        e.stopPropagation(); // évite qu'un clic sur un sous-item déclenche aussi la carte parente
         const modalId = this.getAttribute('data-modal');
         if (modalId) {
             openModal(modalId);

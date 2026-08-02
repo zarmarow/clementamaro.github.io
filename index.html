@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clément Amaro | Designer Produit</title>
+    <title>Clément Amaro | Design Produit & Infographie 3D</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Polices Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,12 +17,16 @@
         <div class="container nav-container">
             <a href="#" class="logo">CA<span>.</span></a>
             <ul class="nav-links">
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#projects-produit">Projets Produit</a></li>
-                <li><a href="#projects-3d">Parcours 3D</a></li>
-                <li><a href="#projects-foxtrot">Foxtrot</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="#about" data-i18n="nav.about">À propos</a></li>
+                <li><a href="#projects-produit" data-i18n="nav.produit">Design Produit</a></li>
+                <li><a href="#projects-3d" data-i18n="nav.3d">Infographie 3D</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                <li class="lang-switch">
+                    <button type="button" id="lang-fr" class="active" data-lang="fr">FR</button>
+                    <span class="sep">/</span>
+                    <button type="button" id="lang-en" data-lang="en">EN</button>
+                </li>
             </ul>
             <button class="mobile-menu-btn" aria-label="Menu">
                 <span></span>
@@ -35,13 +39,13 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container hero-content">
-            <div class="hero-tag reveal">Disponible immédiatement — CDD / CDI</div>
+            <div class="hero-tag reveal"><span data-i18n="hero.tag">Disponible immédiatement — CDD / CDI</span></div>
             <h1 class="reveal">Clément <span>Amaro</span></h1>
-            <p class="subtitle reveal">Designer Produit & Industriel</p>
-            <p class="description reveal">Designer polyvalent, ma démarche est centrée sur le Design Produit, avec une approche rigoureuse qui lie la performance technique à l'excellence esthétique. Du concept à l'objet réel : CAO, NURBS, prototypage physique et rendu photoréaliste.</p>
+            <p class="subtitle reveal" data-i18n="hero.subtitle">Design Produit &amp; Infographie 3D</p>
+            <p class="description reveal" data-i18n="hero.description">Je conçois des objets et des univers, du croquis à la fabrication physique, du modèle temps réel au rendu photoréaliste. Deux pratiques, une même exigence : la faisabilité, les matériaux et la confrontation au réel — physique ou numérique.</p>
             <div class="hero-buttons reveal">
-                <a href="#projects-produit" class="btn btn-primary">Voir mes projets</a>
-                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                <a href="#projects-produit" class="btn btn-primary" data-i18n="hero.btn1">Design Produit</a>
+                <a href="#projects-3d" class="btn btn-secondary" data-i18n="hero.btn2">Infographie 3D</a>
             </div>
         </div>
     </section>
@@ -49,8 +53,8 @@
     <!-- Marquee (Bandeau défilant) -->
     <div class="marquee">
         <div class="marquee-track">
-            <span>Design Produit</span><span>CAO & NURBS</span><span>Rendu Photoréaliste</span><span>Prototypage Physique</span><span>UX/UI</span><span>Contraintes de Fabrication</span>
-            <span>Design Produit</span><span>CAO & NURBS</span><span>Rendu Photoréaliste</span><span>Prototypage Physique</span><span>UX/UI</span><span>Contraintes de Fabrication</span>
+            <span data-i18n="marquee.1">Design Produit</span><span data-i18n="marquee.2">CAO &amp; NURBS</span><span data-i18n="marquee.3">Rendu Photoréaliste</span><span data-i18n="marquee.4">Prototypage Physique</span><span data-i18n="marquee.5">Modélisation Temps Réel</span><span data-i18n="marquee.6">Contraintes de Fabrication</span>
+            <span data-i18n="marquee.1">Design Produit</span><span data-i18n="marquee.2">CAO &amp; NURBS</span><span data-i18n="marquee.3">Rendu Photoréaliste</span><span data-i18n="marquee.4">Prototypage Physique</span><span data-i18n="marquee.5">Modélisation Temps Réel</span><span data-i18n="marquee.6">Contraintes de Fabrication</span>
         </div>
     </div>
 
@@ -58,26 +62,27 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-num">(01) — À PROPOS</span>
-                <h2 class="section-title">Du temps réel<br><em>au produit réel.</em></h2>
+                <span class="section-num" data-i18n="about.num">(01) — À PROPOS</span>
+                <h2 class="section-title" data-i18n-html="about.title">Deux pratiques,<br><em>une même méthode.</em></h2>
             </div>
             <div class="about-content reveal">
                 <div class="about-text">
-                    <p>Designer produit, je conçois de l'idée à l'objet réel : du sketch à la maquette physique, en passant par la modélisation 3D et la CAO. Mon terrain de prédilection, c'est l'équipement et les produits techniques.</p>
-                    <p><strong>Ma polyvalence est mon atout majeur.</strong> Issu d'un Master en 3D Temps Réel, je maîtrise la chaîne de production numérique. Je l'applique désormais au monde physique avec Rhino et Fusion 360, en intégrant les contraintes de production.</p>
-                    
+                    <p data-i18n="about.p1">Designer produit et infographiste 3D, je conçois de l'idée à l'objet fini — que cet objet soit physique ou destiné au temps réel. Sketch, modélisation 3D, CAO, rendu, prototypage : je maîtrise l'ensemble de la chaîne.</p>
+                    <p data-i18n-html="about.p2"><strong>Ma polyvalence est mon atout majeur.</strong> Issu d'un Master en 3D Temps Réel, j'ai appliqué cette expertise à la fabrication physique (Rhino, Fusion 360, prototypage bois) tout comme à des projets d'infographie 3D exigeants — visite virtuelle patrimoniale, pipeline jeu vidéo complet.</p>
+
                     <div class="reorientation-box">
-                        <h3>Une transition stratégique</h3>
-                        <p>Je transpose mon expertise technique du jeu vidéo vers le design industriel. Là où l'IA génère des images, je me concentre sur ce qui compte vraiment : <strong>la faisabilité, les matériaux et la confrontation au physique</strong>.</p>
+                        <h3 data-i18n="about.box.title">Un profil hybride, assumé</h3>
+                        <p data-i18n="about.box.p1">Je ne choisis pas entre le produit et le numérique : les deux pratiques se nourrissent. La rigueur de la CAO m'a rendu plus précis en 3D temps réel ; la maîtrise du pipeline temps réel me rend plus rapide et plus rigoureux en visualisation produit.</p>
+                        <p data-i18n-html="about.box.p2">Là où l'IA générative produit des images, je me concentre sur ce qui reste irremplaçable : <strong>la faisabilité, les matériaux et la confrontation au réel</strong>.</p>
                     </div>
                 </div>
                 <ul class="skills-list">
-                    <li><span>Conception & Idéation</span><span class="num">/01</span></li>
-                    <li><span>Modélisation NURBS & Mesh</span><span class="num">/02</span></li>
-                    <li><span>Rendu Photoréaliste</span><span class="num">/03</span></li>
-                    <li><span>Prototypage & Fabrication</span><span class="num">/04</span></li>
-                    <li><span>UX/UI & Visualisation</span><span class="num">/05</span></li>
-                    <li><span>Gestion de Projet</span><span class="num">/06</span></li>
+                    <li><span data-i18n="skills.1">Conception &amp; Idéation</span><span class="num">/01</span></li>
+                    <li><span data-i18n="skills.2">Modélisation NURBS &amp; Mesh</span><span class="num">/02</span></li>
+                    <li><span data-i18n="skills.3">Rendu Photoréaliste</span><span class="num">/03</span></li>
+                    <li><span data-i18n="skills.4">Prototypage &amp; Fabrication</span><span class="num">/04</span></li>
+                    <li><span data-i18n="skills.5">Pipeline Temps Réel</span><span class="num">/05</span></li>
+                    <li><span data-i18n="skills.6">Gestion de Projet</span><span class="num">/06</span></li>
                 </ul>
             </div>
         </div>
@@ -87,45 +92,52 @@
     <section id="projects-produit" class="projects">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-num">(02) — PROJETS PRODUIT</span>
-                <h2 class="section-title">Conceptions<br><em>tangibles.</em></h2>
+                <span class="section-num" data-i18n="produit.num">(02) — DESIGN PRODUIT</span>
+                <h2 class="section-title" data-i18n-html="produit.title">Conceptions<br><em>tangibles.</em></h2>
             </div>
             <div class="projects-grid">
+
+                <!-- Safran Seats -->
+                <article class="project-card reveal" data-modal="modal-safran">
+                    <div class="project-image confidential">
+                        <div class="confidential-mark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="4" y="10" width="16" height="10" rx="1"/>
+                                <path d="M8 10V7a4 4 0 018 0v3"/>
+                            </svg>
+                            <span data-i18n="safran.badge">Confidentiel</span>
+                        </div>
+                        <div class="overlay">
+                            <span class="view-project" data-i18n="common.view">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category" data-i18n="safran.category">Design Produit — Safran Seats, 2026</div>
+                        <h3 data-i18n="safran.title">Stagiaire Design &amp; Visualisation 3D</h3>
+                        <p data-i18n="safran.desc">Stage en design et visualisation 3D dans l'aéronautique. Contenu confidentiel — détails disponibles sur demande.</p>
+                        <div class="tags">
+                            <span data-i18n="safran.tag1">Visualisation 3D</span>
+                            <span data-i18n="safran.tag2">Contraintes Industrielles</span>
+                            <span data-i18n="safran.tag3">CAO</span>
+                        </div>
+                    </div>
+                </article>
 
                 <!-- Ébénisterie -->
                 <article class="project-card reveal" data-modal="modal-ebenisterie">
                     <div class="project-image" style="background-image: url('images/Ebenisterie.jpg');">
                         <div class="overlay">
-                            <span class="view-project">Voir le projet</span>
+                            <span class="view-project" data-i18n="common.view">Voir le projet</span>
                         </div>
                     </div>
                     <div class="project-info">
-                        <div class="category">Design Produit — Fabrication</div>
-                        <h3>Ébénisterie</h3>
-                        <p>Conception et fabrication d'un meuble, de la modélisation à l'assemblage final.</p>
+                        <div class="category" data-i18n="ebenisterie.category">Design Produit — Fabrication</div>
+                        <h3 data-i18n="ebenisterie.title">Ébénisterie</h3>
+                        <p data-i18n="ebenisterie.desc">Conception et fabrication d'un meuble, de la modélisation à l'assemblage final.</p>
                         <div class="tags">
                             <span>Fusion 360</span>
-                            <span>Fabrication bois</span>
-                            <span>Plans techniques</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Food Dispenser -->
-                <article class="project-card reveal" data-modal="modal-dispenser">
-                    <div class="project-image" style="background-image: url('images/FoodDispenser.png');">
-                        <div class="overlay">
-                            <span class="view-project">Voir le projet</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="category">Design Produit — Blue Stinger Remake</div>
-                        <h3>Food Dispenser</h3>
-                        <p>Modélisation d'un objet produit, de la recherche de références au texturing final.</p>
-                        <div class="tags">
-                            <span>Hard Surface</span>
-                            <span>Blender</span>
-                            <span>PBR</span>
+                            <span data-i18n="ebenisterie.tag2">Fabrication bois</span>
+                            <span data-i18n="ebenisterie.tag3">Plans techniques</span>
                         </div>
                     </div>
                 </article>
@@ -134,16 +146,35 @@
                 <article class="project-card reveal" data-modal="modal-espace">
                     <div class="project-image" style="background-image: url('images/RenduPhotorealiste.png');">
                         <div class="overlay">
-                            <span class="view-project">Voir le projet</span>
+                            <span class="view-project" data-i18n="common.view">Voir le projet</span>
                         </div>
                     </div>
                     <div class="project-info">
-                        <div class="category">Design d'Intérieur</div>
-                        <h3>Rendu d'espace</h3>
-                        <p>Conception d'un espace et rendu photoréaliste : mobilier, agencement, lumière.</p>
+                        <div class="category" data-i18n="espace.category">Design d'Intérieur</div>
+                        <h3 data-i18n="espace.title">Rendu d'espace</h3>
+                        <p data-i18n="espace.desc">Conception d'un espace et rendu photoréaliste : mobilier, agencement, lumière.</p>
                         <div class="tags">
                             <span>Blender</span>
-                            <span>Rendu photoréaliste</span>
+                            <span data-i18n="espace.tag2">Rendu photoréaliste</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Food Dispenser -->
+                <article class="project-card reveal" data-modal="modal-dispenser">
+                    <div class="project-image" style="background-image: url('images/FoodDispenser.png');">
+                        <div class="overlay">
+                            <span class="view-project" data-i18n="common.view">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category" data-i18n="dispenser.category">Design Produit — Blue Stinger Remake</div>
+                        <h3 data-i18n="dispenser.title">Food Dispenser</h3>
+                        <p data-i18n="dispenser.desc">Modélisation d'un objet produit, de la recherche de références au texturing final.</p>
+                        <div class="tags">
+                            <span data-i18n="dispenser.tag1">Hard Surface</span>
+                            <span>Blender</span>
+                            <span>PBR</span>
                         </div>
                     </div>
                 </article>
@@ -152,12 +183,12 @@
         </div>
     </section>
 
-    <!-- Parcours 3D Section (hors Foxtrot) -->
+    <!-- Infographie 3D Section -->
     <section id="projects-3d" class="projects">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-num">(03) — PARCOURS 3D</span>
-                <h2 class="section-title">Créations<br><em>numériques.</em></h2>
+                <span class="section-num" data-i18n="parcours3d.num">(03) — INFOGRAPHIE 3D</span>
+                <h2 class="section-title" data-i18n-html="parcours3d.title">Créations<br><em>numériques.</em></h2>
             </div>
             <div class="projects-grid">
 
@@ -165,17 +196,17 @@
                 <article class="project-card reveal" data-modal="modal-crypte">
                     <div class="project-image" style="background-image: url('images/Crypte-Render.jpg');">
                         <div class="overlay">
-                            <span class="view-project">Voir le projet</span>
+                            <span class="view-project" data-i18n="common.view">Voir le projet</span>
                         </div>
                     </div>
                     <div class="project-info">
-                        <div class="category">Patrimoine & VR — 2025</div>
-                        <h3>Crypte Sainte-Catherine</h3>
-                        <p>Visite virtuelle VR de Tonnerre avec photogrammétrie et optimisation.</p>
+                        <div class="category" data-i18n="crypte.category">Patrimoine &amp; VR — 2025</div>
+                        <h3 data-i18n="crypte.title">Crypte Sainte-Catherine</h3>
+                        <p data-i18n="crypte.desc">Visite virtuelle VR de Tonnerre avec photogrammétrie et optimisation.</p>
                         <div class="tags">
-                            <span>Photogrammétrie</span>
+                            <span data-i18n="crypte.tag1">Photogrammétrie</span>
                             <span>VR</span>
-                            <span>Optimisation</span>
+                            <span data-i18n="crypte.tag3">Optimisation</span>
                         </div>
                     </div>
                 </article>
@@ -184,17 +215,17 @@
                 <article class="project-card reveal" data-modal="modal-mushroom">
                     <div class="project-image" style="background-image: url('images/Mushroom-04.jpg');">
                         <div class="overlay">
-                            <span class="view-project">Voir le projet</span>
+                            <span class="view-project" data-i18n="common.view">Voir le projet</span>
                         </div>
                     </div>
                     <div class="project-info">
-                        <div class="category">Exercice — 2024</div>
-                        <h3>Sculpting Organique</h3>
-                        <p>Sculpting de champignon sur ZBrush avec itérations Dynamesh progressives.</p>
+                        <div class="category" data-i18n="mushroom.category">Exercice — 2024</div>
+                        <h3 data-i18n="mushroom.title">Sculpting Organique</h3>
+                        <p data-i18n="mushroom.desc">Sculpting de champignon sur ZBrush avec itérations Dynamesh progressives.</p>
                         <div class="tags">
                             <span>ZBrush</span>
                             <span>Dynamesh</span>
-                            <span>Organic</span>
+                            <span data-i18n="mushroom.tag3">Organique</span>
                         </div>
                     </div>
                 </article>
@@ -203,125 +234,58 @@
                 <article class="project-card reveal" data-modal="modal-character">
                     <div class="project-image" style="background-image: url('images/DogsBower-ZbrushOutfit-Front.png');">
                         <div class="overlay">
-                            <span class="view-project">Voir le projet</span>
+                            <span class="view-project" data-i18n="common.view">Voir le projet</span>
                         </div>
                     </div>
                     <div class="project-info">
-                        <div class="category">Jeu Vidéo · Blue Stinger Remake — 2024</div>
-                        <h3>Personnage "Dogs Bower"</h3>
-                        <p>Création complète de personnage avec Character Creator, Marvelous Designer, Blender.</p>
+                        <div class="category" data-i18n="character.category">Jeu Vidéo · Blue Stinger Remake — 2024</div>
+                        <h3 data-i18n="character.title">Personnage "Dogs Bower"</h3>
+                        <p data-i18n="character.desc">Création complète de personnage avec Character Creator, Marvelous Designer, Blender.</p>
                         <div class="tags">
-                            <span>Character</span>
+                            <span data-i18n="character.tag1">Personnage</span>
                             <span>ZBrush</span>
                             <span>Substance</span>
                         </div>
                     </div>
                 </article>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Foxtrot Section -->
-    <section id="projects-foxtrot" class="projects">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-num">(04) — PROJET FOXTROT</span>
-                <h2 class="section-title">Metaverse<br><em>& Innovation.</em></h2>
-            </div>
-            <div class="projects-grid">
-
-                <!-- MK18 -->
-                <article class="project-card reveal" data-modal="modal-mk18">
-                    <div class="project-image" style="background-image: url('images/Foxtrot-MK18-Render.png');">
+                <!-- Foxtrot Mega-Project -->
+                <article class="project-card reveal foxtrot-mega" style="grid-column: 1 / -1;">
+                    <div class="project-image" style="background-image: url('images/Foxtrot-01.png');">
                         <div class="overlay">
-                            <span class="view-project">Voir le projet</span>
+                            <span class="view-project" data-i18n="foxtrot.badge">Projet complet</span>
                         </div>
                     </div>
-                    <div class="project-info">
-                        <div class="category">Metaverse · Foxtrot — 2023-2025</div>
-                        <h3>MK18 Modulaire</h3>
-                        <p>Arme entièrement conçue sur Blender avec structure modulaire pour personnalisation.</p>
-                        <div class="tags">
-                            <span>Blender</span>
-                            <span>Modularité</span>
-                            <span>Texturing</span>
-                        </div>
+                    <div class="project-info mega-project-header">
+                        <div class="category" data-i18n="foxtrot.category">Metaverse · Projet Foxtrot — 2023-2025</div>
+                        <h3 data-i18n="foxtrot.title">Foxtrot</h3>
+                        <p class="mega-desc" data-i18n="foxtrot.desc">Projet de metaverse mené en équipe sur deux ans : pipeline 3D temps réel complet, de la modélisation d'assets à l'UX/UI, en passant par la production d'assets marketing pour une campagne Kickstarter.</p>
                     </div>
-                </article>
-
-                <!-- Smart Materials -->
-                <article class="project-card reveal" data-modal="modal-smartmat">
-                    <div class="project-image" style="background-image: url('images/Foxtrot-Pouches.png');">
-                        <div class="overlay">
-                            <span class="view-project">Voir le projet</span>
+                    <div class="subprojects-grid">
+                        <div class="subproject-item" data-modal="modal-mk18">
+                            <div class="subproject-thumb" style="background-image: url('images/Foxtrot-MK18-Render.png');"></div>
+                            <h4 data-i18n="foxtrot.mk18.title">Asset Modulaire MK18</h4>
+                            <p data-i18n="foxtrot.mk18.desc">Modélisation hard surface, structure modulaire et texturing.</p>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="category">Metaverse · Foxtrot — 2023-2025</div>
-                        <h3>Smart Materials</h3>
-                        <p>Bibliothèque de matériaux intelligents pour accélérer le texturing des assets.</p>
-                        <div class="tags">
-                            <span>Substance</span>
-                            <span>Workflow</span>
-                            <span>Optimisation</span>
+                        <div class="subproject-item" data-modal="modal-smartmat">
+                            <div class="subproject-thumb" style="background-image: url('images/Foxtrot-Pouches.png');"></div>
+                            <h4 data-i18n="foxtrot.smartmat.title">Smart Materials</h4>
+                            <p data-i18n="foxtrot.smartmat.desc">Bibliothèque de matériaux pour accélérer le texturing.</p>
                         </div>
-                    </div>
-                </article>
-
-                <!-- Avatar -->
-                <article class="project-card reveal" data-modal="modal-avatar">
-                    <div class="project-image" style="background-image: url('images/Foxtrot-Avatars-Render.png');">
-                        <div class="overlay">
-                            <span class="view-project">Voir le projet</span>
+                        <div class="subproject-item" data-modal="modal-avatar">
+                            <div class="subproject-thumb" style="background-image: url('images/Foxtrot-Avatars-Render.png');"></div>
+                            <h4 data-i18n="foxtrot.avatar.title">Avatar Personnalisable</h4>
+                            <p data-i18n="foxtrot.avatar.desc">Low poly, baking, optimisation mobile.</p>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="category">Metaverse · Foxtrot — 2023-2025</div>
-                        <h3>Avatar Customizable</h3>
-                        <p>Modélisation low poly d'un avatar 3D avec parties personnalisables, optimisé mobile.</p>
-                        <div class="tags">
-                            <span>Low Poly</span>
-                            <span>Baking</span>
-                            <span>Mobile</span>
+                        <div class="subproject-item" data-modal="modal-uxui">
+                            <div class="subproject-thumb" style="background-image: url('images/Foxtrot-Socials.png');"></div>
+                            <h4 data-i18n="foxtrot.uxui.title">UX/UI Design</h4>
+                            <p data-i18n="foxtrot.uxui.desc">Interface Figma, navigation et responsive.</p>
                         </div>
-                    </div>
-                </article>
-
-                <!-- UX/UI Design -->
-                <article class="project-card reveal" data-modal="modal-uxui">
-                    <div class="project-image" style="background-image: url('images/Foxtrot-Socials.png');">
-                        <div class="overlay">
-                            <span class="view-project">Voir le projet</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="category">Metaverse · Foxtrot — 2023-2025</div>
-                        <h3>UX/UI Design</h3>
-                        <p>Conception complète de l'interface sur Figma : navigation fluide et responsive.</p>
-                        <div class="tags">
-                            <span>Figma</span>
-                            <span>Wireframing</span>
-                            <span>Mobile</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Marketing Assets -->
-                <article class="project-card reveal" data-modal="modal-marketing">
-                    <div class="project-image" style="background-image: url('images/Foxtrot-Rooms.png');">
-                        <div class="overlay">
-                            <span class="view-project">Voir le projet</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="category">Metaverse · Foxtrot — 2023-2025</div>
-                        <h3>Assets Marketing</h3>
-                        <p>Création d'assets pour la campagne Kickstarter et les réseaux sociaux.</p>
-                        <div class="tags">
-                            <span>Figma</span>
-                            <span>Kickstarter</span>
-                            <span>Social Media</span>
+                        <div class="subproject-item" data-modal="modal-marketing">
+                            <div class="subproject-thumb" style="background-image: url('images/Foxtrot-Rooms.png');"></div>
+                            <h4 data-i18n="foxtrot.marketing.title">Assets Marketing</h4>
+                            <p data-i18n="foxtrot.marketing.desc">Campagne Kickstarter et réseaux sociaux.</p>
                         </div>
                     </div>
                 </article>
@@ -334,18 +298,18 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-num">(05) — CONTACT</span>
-                <h2 class="section-title">Parlons de<br><em>votre projet.</em></h2>
+                <span class="section-num" data-i18n="contact.num">(04) — CONTACT</span>
+                <h2 class="section-title" data-i18n-html="contact.title">Parlons de<br><em>votre projet.</em></h2>
             </div>
             <div class="contact-content reveal">
-                <p class="contact-cta">Intéressé par une collaboration ou vous souhaitez en savoir plus sur mes projets ? N'hésitez pas à me contacter !</p>
+                <p class="contact-cta" data-i18n="contact.cta">Intéressé par une collaboration ou vous souhaitez en savoir plus sur mes projets ? N'hésitez pas à me contacter !</p>
                 <div class="contact-links">
                     <a href="mailto:contact@clementamaro.com" class="contact-btn">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                             <polyline points="22,6 12,13 2,6"/>
                         </svg>
-                        Envoyer un email
+                        <span data-i18n="contact.email">Envoyer un email</span>
                     </a>
                     <a href="#" class="contact-btn">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -367,38 +331,77 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Clément Amaro. Tous droits réservés.</p>
+            <p>&copy; 2026 Clément Amaro. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
         </div>
     </footer>
 
     <!-- ============================================ -->
-    <!-- MODALS (Structure simplifiée pour l'exemple) -->
+    <!-- MODALS -->
     <!-- ============================================ -->
-    
+
+    <!-- Modal Safran Seats -->
+    <div id="modal-safran" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-safran')">&times;</button>
+            <div class="modal-header">
+                <div class="cat" data-i18n="safran.category">Design Produit — Safran Seats, 2026</div>
+                <h2 data-i18n="safran.title">Stagiaire Design &amp; Visualisation 3D</h2>
+                <p data-i18n="safran.modal.intro">Stage réalisé au sein de Safran Seats, dans le secteur aéronautique. Pour des raisons de confidentialité industrielle, le contenu détaillé de ce projet n'est pas publiable en ligne.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-image confidential">
+                        <div class="confidential-mark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="4" y="10" width="16" height="10" rx="1"/>
+                                <path d="M8 10V7a4 4 0 018 0v3"/>
+                            </svg>
+                            <span data-i18n="safran.badge">Confidentiel</span>
+                        </div>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="safran.modal.h1">Ce que je peux partager</h3>
+                        <ul>
+                            <li data-i18n="safran.modal.li1">Visualisation 3D dans un contexte industriel exigeant</li>
+                            <li data-i18n="safran.modal.li2">Intégration de contraintes techniques et normatives fortes</li>
+                            <li data-i18n="safran.modal.li3">Travail en environnement CAO professionnel</li>
+                        </ul>
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>CAO</span>
+                            <span data-i18n="safran.tag1">Visualisation 3D</span>
+                        </div>
+                        <p style="margin-top:20px; font-size:14px; color:var(--muted);" data-i18n="safran.modal.footer">Détails complets disponibles sur demande, dans le respect des règles de confidentialité de l'entreprise.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal Ébénisterie -->
     <div id="modal-ebenisterie" class="modal-overlay">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('modal-ebenisterie')">&times;</button>
             <div class="modal-header">
-                <div class="cat">Design Produit — Fabrication</div>
-                <h2>Ébénisterie</h2>
-                <p>Conception et fabrication d'un meuble en appliquant un processus alliant design et réalisation concrète.</p>
+                <div class="cat" data-i18n="ebenisterie.category">Design Produit — Fabrication</div>
+                <h2 data-i18n="ebenisterie.title">Ébénisterie</h2>
+                <p data-i18n="ebenisterie.modal.intro">Conception et fabrication d'un meuble en appliquant un processus alliant design et réalisation concrète.</p>
             </div>
             <div class="modal-body">
                 <div class="modal-grid">
                     <div class="modal-image" style="background-image: url('images/Ebenisterie.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="modal-details">
-                        <h3>Étapes clés</h3>
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
                         <ul>
-                            <li>Conception d'un design fonctionnel et esthétique</li>
-                            <li>Réalisation de plans techniques détaillés</li>
-                            <li>Sélection des matériaux et techniques d'assemblage</li>
-                            <li>Fabrication et finition du meuble</li>
+                            <li data-i18n="ebenisterie.modal.li1">Conception d'un design fonctionnel et esthétique</li>
+                            <li data-i18n="ebenisterie.modal.li2">Réalisation de plans techniques détaillés</li>
+                            <li data-i18n="ebenisterie.modal.li3">Sélection des matériaux et techniques d'assemblage</li>
+                            <li data-i18n="ebenisterie.modal.li4">Fabrication et finition du meuble</li>
                         </ul>
-                        <h3>Outils utilisés</h3>
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
                         <div class="modal-tags">
                             <span>Fusion 360</span>
-                            <span>Fabrication bois</span>
+                            <span data-i18n="ebenisterie.tag2">Fabrication bois</span>
                         </div>
                     </div>
                 </div>
@@ -411,22 +414,22 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('modal-dispenser')">&times;</button>
             <div class="modal-header">
-                <div class="cat">Design Produit — Blue Stinger Remake</div>
-                <h2>Food Dispenser</h2>
-                <p>Création d'un distributeur pour le remake de Blue Stinger, avec un processus détaillé pour garantir un modèle réaliste.</p>
+                <div class="cat" data-i18n="dispenser.category">Design Produit — Blue Stinger Remake</div>
+                <h2 data-i18n="dispenser.title">Food Dispenser</h2>
+                <p data-i18n="dispenser.modal.intro">Création d'un distributeur pour le remake de Blue Stinger, avec un processus détaillé pour garantir un modèle réaliste.</p>
             </div>
             <div class="modal-body">
                 <div class="modal-grid">
                     <div class="modal-image" style="background-image: url('images/FoodDispenser.png'); background-size: cover; background-position: center;"></div>
                     <div class="modal-details">
-                        <h3>Étapes clés</h3>
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
                         <ul>
-                            <li>Recherche de références & respect de la direction artistique</li>
-                            <li>Modélisation high poly</li>
-                            <li>Low poly & UV</li>
-                            <li>Texturing</li>
+                            <li data-i18n="dispenser.modal.li1">Recherche de références &amp; respect de la direction artistique</li>
+                            <li data-i18n="dispenser.modal.li2">Modélisation high poly</li>
+                            <li data-i18n="dispenser.modal.li3">Low poly &amp; UV</li>
+                            <li data-i18n="dispenser.modal.li4">Texturing</li>
                         </ul>
-                        <h3>Outils utilisés</h3>
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
                         <div class="modal-tags">
                             <span>Blender</span>
                             <span>Substance Painter</span>
@@ -443,22 +446,22 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('modal-espace')">&times;</button>
             <div class="modal-header">
-                <div class="cat">Design d'Intérieur</div>
-                <h2>Rendu d'espace</h2>
-                <p>Conception d'un espace et réalisation d'un rendu photoréaliste.</p>
+                <div class="cat" data-i18n="espace.category">Design d'Intérieur</div>
+                <h2 data-i18n="espace.title">Rendu d'espace</h2>
+                <p data-i18n="espace.modal.intro">Conception d'un espace et réalisation d'un rendu photoréaliste.</p>
             </div>
             <div class="modal-body">
                 <div class="modal-grid">
                     <div class="modal-image" style="background-image: url('images/RenduPhotorealiste.png'); background-size: cover; background-position: center;"></div>
                     <div class="modal-details">
-                        <h3>Étapes clés</h3>
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
                         <ul>
-                            <li>Conception d'un espace fonctionnel et esthétique</li>
-                            <li>Modélisation 3D détaillée des éléments</li>
-                            <li>Mise en lumière et texturage pour un réalisme accru</li>
-                            <li>Réalisation du rendu photoréaliste final</li>
+                            <li data-i18n="espace.modal.li1">Conception d'un espace fonctionnel et esthétique</li>
+                            <li data-i18n="espace.modal.li2">Modélisation 3D détaillée des éléments</li>
+                            <li data-i18n="espace.modal.li3">Mise en lumière et texturage pour un réalisme accru</li>
+                            <li data-i18n="espace.modal.li4">Réalisation du rendu photoréaliste final</li>
                         </ul>
-                        <h3>Outils utilisés</h3>
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
                         <div class="modal-tags">
                             <span>Blender</span>
                         </div>
@@ -473,22 +476,22 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('modal-crypte')">&times;</button>
             <div class="modal-header">
-                <div class="cat">Patrimoine & VR — 2025</div>
-                <h2>Crypte Sainte-Catherine</h2>
-                <p>Visite virtuelle en VR de la Crypte Sainte-Catherine à Tonnerre.</p>
+                <div class="cat" data-i18n="crypte.category">Patrimoine &amp; VR — 2025</div>
+                <h2 data-i18n="crypte.title">Crypte Sainte-Catherine</h2>
+                <p data-i18n="crypte.modal.intro">Visite virtuelle en VR de la Crypte Sainte-Catherine à Tonnerre.</p>
             </div>
             <div class="modal-body">
                 <div class="modal-grid">
                     <div class="modal-image" style="background-image: url('images/Crypte-Render.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="modal-details">
-                        <h3>Étapes clés</h3>
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
                         <ul>
-                            <li>Photogrammétrie</li>
-                            <li>Modélisation</li>
-                            <li>Baking des textures</li>
-                            <li>Rattrapage des textures avec Photoshop</li>
+                            <li data-i18n="crypte.modal.li1">Photogrammétrie</li>
+                            <li data-i18n="crypte.modal.li2">Modélisation</li>
+                            <li data-i18n="crypte.modal.li3">Baking des textures</li>
+                            <li data-i18n="crypte.modal.li4">Rattrapage des textures avec Photoshop</li>
                         </ul>
-                        <h3>Outils utilisés</h3>
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
                         <div class="modal-tags">
                             <span>Photoshop</span>
                             <span>3ds Max</span>
@@ -504,21 +507,21 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('modal-mushroom')">&times;</button>
             <div class="modal-header">
-                <div class="cat">Exercice — 2024</div>
-                <h2>Sculpting Organique</h2>
-                <p>Exercice de sculpting d'un champignon sur ZBrush.</p>
+                <div class="cat" data-i18n="mushroom.category">Exercice — 2024</div>
+                <h2 data-i18n="mushroom.title">Sculpting Organique</h2>
+                <p data-i18n="mushroom.modal.intro">Exercice de sculpting d'un champignon sur ZBrush.</p>
             </div>
             <div class="modal-body">
                 <div class="modal-grid">
                     <div class="modal-image" style="background-image: url('images/Mushroom-01.jpg'); background-size: cover; background-position: center;"></div>
                     <div class="modal-details">
-                        <h3>Étapes clés</h3>
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
                         <ul>
-                            <li>Recherche de références</li>
-                            <li>Modélisation high poly avec Dynamesh</li>
-                            <li>Affinage des formes et détails</li>
+                            <li data-i18n="mushroom.modal.li1">Recherche de références</li>
+                            <li data-i18n="mushroom.modal.li2">Modélisation high poly avec Dynamesh</li>
+                            <li data-i18n="mushroom.modal.li3">Affinage des formes et détails</li>
                         </ul>
-                        <h3>Outils utilisés</h3>
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
                         <div class="modal-tags">
                             <span>ZBrush</span>
                         </div>
@@ -533,15 +536,15 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('modal-character')">&times;</button>
             <div class="modal-header">
-                <div class="cat">Jeu Vidéo · Blue Stinger Remake — 2024</div>
-                <h2>Personnage "Dogs Bower"</h2>
-                <p>Création complète de personnage dans le remake de Blue Stinger.</p>
+                <div class="cat" data-i18n="character.category">Jeu Vidéo · Blue Stinger Remake — 2024</div>
+                <h2 data-i18n="character.title">Personnage "Dogs Bower"</h2>
+                <p data-i18n="character.modal.intro">Création complète de personnage dans le remake de Blue Stinger.</p>
             </div>
             <div class="modal-body">
                 <div class="modal-grid">
                     <div class="modal-image" style="background-image: url('images/DogsBower-MarvelousDesigner.png'); background-size: cover; background-position: center;"></div>
                     <div class="modal-details">
-                        <h3>Étapes clés</h3>
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
                         <ul>
                             <li>Character Creator</li>
                             <li>Marvelous Designer</li>
@@ -549,9 +552,9 @@
                             <li>ZBrush</li>
                             <li>Substance Painter</li>
                         </ul>
-                        <h3>Outils utilisés</h3>
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
                         <div class="modal-tags">
-                            <span>Character</span>
+                            <span data-i18n="character.tag1">Personnage</span>
                             <span>ZBrush</span>
                             <span>Substance</span>
                         </div>
@@ -566,21 +569,21 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('modal-mk18')">&times;</button>
             <div class="modal-header">
-                <div class="cat">Metaverse · Foxtrot — 2023-2025</div>
-                <h2>MK18 Modulaire</h2>
-                <p>Arme entièrement conçue sur Blender avec structure modulaire.</p>
+                <div class="cat" data-i18n="foxtrot.category">Metaverse · Projet Foxtrot — 2023-2025</div>
+                <h2 data-i18n="foxtrot.mk18.title">Asset Modulaire MK18</h2>
+                <p data-i18n="foxtrot.mk18.modal.intro">Asset hard surface entièrement modélisé sous Blender, avec structure modulaire pensée pour la personnalisation.</p>
             </div>
             <div class="modal-body">
                 <div class="modal-grid">
                     <div class="modal-image" style="background-image: url('images/Foxtrot-MK18-Dismantled.png'); background-size: cover; background-position: center;"></div>
                     <div class="modal-details">
-                        <h3>Caractéristiques</h3>
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
                         <ul>
-                            <li>Modélisation optimisée</li>
-                            <li>Modularité</li>
-                            <li>Texturing réaliste</li>
+                            <li data-i18n="foxtrot.mk18.modal.li1">Modélisation hard surface optimisée</li>
+                            <li data-i18n="foxtrot.mk18.modal.li2">Conception modulaire (démontage / assemblage)</li>
+                            <li data-i18n="foxtrot.mk18.modal.li3">Texturing réaliste</li>
                         </ul>
-                        <h3>Outils utilisés</h3>
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
                         <div class="modal-tags">
                             <span>Blender</span>
                             <span>Substance Painter</span>
@@ -597,21 +600,21 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('modal-smartmat')">&times;</button>
             <div class="modal-header">
-                <div class="cat">Metaverse · Foxtrot — 2023-2025</div>
-                <h2>Smart Materials</h2>
-                <p>Conception de Smart Materials spécifiquement pour Foxtrot.</p>
+                <div class="cat" data-i18n="foxtrot.category">Metaverse · Projet Foxtrot — 2023-2025</div>
+                <h2 data-i18n="foxtrot.smartmat.title">Smart Materials</h2>
+                <p data-i18n="foxtrot.smartmat.modal.intro">Conception de Smart Materials spécifiquement pour Foxtrot.</p>
             </div>
             <div class="modal-body">
                 <div class="modal-grid">
                     <div class="modal-image" style="background-image: url('images/Foxtrot-Pouches.png'); background-size: cover; background-position: center;"></div>
                     <div class="modal-details">
-                        <h3>Bénéfices</h3>
+                        <h3 data-i18n="foxtrot.smartmat.modal.h1">Bénéfices</h3>
                         <ul>
-                            <li>Gain de temps</li>
-                            <li>Précision</li>
-                            <li>Polyvalence</li>
+                            <li data-i18n="foxtrot.smartmat.modal.li1">Gain de temps</li>
+                            <li data-i18n="foxtrot.smartmat.modal.li2">Précision</li>
+                            <li data-i18n="foxtrot.smartmat.modal.li3">Polyvalence</li>
                         </ul>
-                        <h3>Outils utilisés</h3>
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
                         <div class="modal-tags">
                             <span>Substance Painter</span>
                         </div>
@@ -626,22 +629,22 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('modal-avatar')">&times;</button>
             <div class="modal-header">
-                <div class="cat">Metaverse · Foxtrot — 2023-2025</div>
-                <h2>Avatar Customizable</h2>
-                <p>Modélisation lowpoly d'un avatar 3D avec parties personnalisables.</p>
+                <div class="cat" data-i18n="foxtrot.category">Metaverse · Projet Foxtrot — 2023-2025</div>
+                <h2 data-i18n="foxtrot.avatar.title">Avatar Personnalisable</h2>
+                <p data-i18n="foxtrot.avatar.modal.intro">Modélisation lowpoly d'un avatar 3D avec parties personnalisables.</p>
             </div>
             <div class="modal-body">
                 <div class="modal-grid">
                     <div class="modal-image" style="background-image: url('images/Foxtrot-Avatars-Mesh.png'); background-size: cover; background-position: center;"></div>
                     <div class="modal-details">
-                        <h3>Étapes clés</h3>
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
                         <ul>
-                            <li>Modélisation lowpoly</li>
-                            <li>Baking des textures</li>
-                            <li>Optimisation mobile</li>
-                            <li>Parties personnalisables</li>
+                            <li data-i18n="foxtrot.avatar.modal.li1">Modélisation lowpoly</li>
+                            <li data-i18n="foxtrot.avatar.modal.li2">Baking des textures</li>
+                            <li data-i18n="foxtrot.avatar.modal.li3">Optimisation mobile</li>
+                            <li data-i18n="foxtrot.avatar.modal.li4">Parties personnalisables</li>
                         </ul>
-                        <h3>Outils utilisés</h3>
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
                         <div class="modal-tags">
                             <span>Photoshop</span>
                             <span>Blender</span>
@@ -658,22 +661,22 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('modal-uxui')">&times;</button>
             <div class="modal-header">
-                <div class="cat">Metaverse · Foxtrot — 2023-2025</div>
-                <h2>UX/UI Design</h2>
-                <p>Conception de l'interface utilisateur sur Figma.</p>
+                <div class="cat" data-i18n="foxtrot.category">Metaverse · Projet Foxtrot — 2023-2025</div>
+                <h2 data-i18n="foxtrot.uxui.title">UX/UI Design</h2>
+                <p data-i18n="foxtrot.uxui.modal.intro">Conception de l'interface utilisateur sur Figma.</p>
             </div>
             <div class="modal-body">
                 <div class="modal-grid">
                     <div class="modal-image" style="background-image: url('images/Foxtrot-Socials.png'); background-size: cover; background-position: center;"></div>
                     <div class="modal-details">
-                        <h3>Étapes clés</h3>
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
                         <ul>
-                            <li>Wireframing & prototypage sur Figma</li>
-                            <li>Optimisation UX/UI pour une utilisation intuitive</li>
-                            <li>Design responsive adapté aux contraintes mobiles</li>
-                            <li>Identité visuelle cohérente avec la cible</li>
+                            <li data-i18n="foxtrot.uxui.modal.li1">Wireframing &amp; prototypage sur Figma</li>
+                            <li data-i18n="foxtrot.uxui.modal.li2">Optimisation UX/UI pour une utilisation intuitive</li>
+                            <li data-i18n="foxtrot.uxui.modal.li3">Design responsive adapté aux contraintes mobiles</li>
+                            <li data-i18n="foxtrot.uxui.modal.li4">Identité visuelle cohérente avec la cible</li>
                         </ul>
-                        <h3>Outils utilisés</h3>
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
                         <div class="modal-tags">
                             <span>Figma</span>
                             <span>Photoshop</span>
@@ -689,22 +692,22 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal('modal-marketing')">&times;</button>
             <div class="modal-header">
-                <div class="cat">Metaverse · Foxtrot — 2023-2025</div>
-                <h2>Assets Marketing</h2>
-                <p>Conception d'assets marketing pour Instagram et Kickstarter.</p>
+                <div class="cat" data-i18n="foxtrot.category">Metaverse · Projet Foxtrot — 2023-2025</div>
+                <h2 data-i18n="foxtrot.marketing.title">Assets Marketing</h2>
+                <p data-i18n="foxtrot.marketing.modal.intro">Conception d'assets marketing pour Instagram et Kickstarter.</p>
             </div>
             <div class="modal-body">
                 <div class="modal-grid">
                     <div class="modal-image" style="background-image: url('images/Foxtrot-Rooms.png'); background-size: cover; background-position: center;"></div>
                     <div class="modal-details">
-                        <h3>Étapes clés</h3>
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
                         <ul>
-                            <li>Respect d'un planning marketing</li>
-                            <li>Posts & stories pour la campagne Kickstarter</li>
-                            <li>Assets expliquant les différentes fonctionnalités</li>
-                            <li>Cohérence visuelle & branding</li>
+                            <li data-i18n="foxtrot.marketing.modal.li1">Respect d'un planning marketing</li>
+                            <li data-i18n="foxtrot.marketing.modal.li2">Posts &amp; stories pour la campagne Kickstarter</li>
+                            <li data-i18n="foxtrot.marketing.modal.li3">Assets expliquant les différentes fonctionnalités</li>
+                            <li data-i18n="foxtrot.marketing.modal.li4">Cohérence visuelle &amp; branding</li>
                         </ul>
-                        <h3>Outils utilisés</h3>
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
                         <div class="modal-tags">
                             <span>Figma</span>
                             <span>Kickstarter</span>
@@ -716,6 +719,7 @@
         </div>
     </div>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
