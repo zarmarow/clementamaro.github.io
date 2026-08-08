@@ -155,6 +155,15 @@ function closeModal(modalId) {
     }
 }
 
+function setGalleryImage(modalId, imageUrl, thumbBtn) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    const mainImg = modal.querySelector('.modal-gallery-main');
+    if (mainImg) mainImg.style.backgroundImage = `url('${imageUrl}')`;
+    modal.querySelectorAll('.modal-gallery-thumbs button').forEach(b => b.classList.remove('active'));
+    if (thumbBtn) thumbBtn.classList.add('active');
+}
+
 // Attacher les événements click aux cartes projets et aux sous-projets (mega-projet Foxtrot)
 document.querySelectorAll('.project-card[data-modal], .subproject-item[data-modal]').forEach(card => {
     card.addEventListener('click', function(e) {
