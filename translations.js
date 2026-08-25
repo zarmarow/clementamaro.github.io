@@ -105,6 +105,11 @@ var translations = {
         "parcours3d.num": "(03) — INFOGRAPHIE 3D",
         "parcours3d.title": "Créations<br><em>numériques.</em>",
 
+        "bluestinger.badge": "Projet complet",
+        "bluestinger.category": "Jeu Vidéo · Blue Stinger Remake — 2024",
+        "bluestinger.title": "Blue Stinger Remake",
+        "bluestinger.desc": "Deux contributions pour le remake du jeu Blue Stinger : la modélisation d'un objet produit crédible et la création complète d'un personnage, du sculpt au texturing final.",
+
         "crypte.category": "Patrimoine & VR — 2025",
         "crypte.title": "Crypte Sainte-Catherine",
         "crypte.desc": "Visite virtuelle VR de Tonnerre avec photogrammétrie et optimisation.",
@@ -315,6 +320,11 @@ var translations = {
 
         "parcours3d.num": "(03) — 3D ART",
         "parcours3d.title": "Digital<br><em>creations.</em>",
+
+        "bluestinger.badge": "Full project",
+        "bluestinger.category": "Video Game · Blue Stinger Remake — 2024",
+        "bluestinger.title": "Blue Stinger Remake",
+        "bluestinger.desc": "Two contributions to the Blue Stinger game remake: modeling a credible product object and creating a full character, from sculpt to final texturing.",
 
         "crypte.category": "Heritage & VR — 2025",
         "crypte.title": "Sainte-Catherine Crypt",
