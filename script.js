@@ -174,3 +174,105 @@ document.querySelectorAll('.project-card[data-modal], .subproject-item[data-moda
         }
     });
 });
+
+// ============================================
+// ÉDITION ARTISTIQUE — curseur, lettres, magnétisme, parallax
+// ============================================
+(function() {
+    const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+
+    // --- Éclatement du nom en lettres interactives (hero) ---
+    const heroTitle = document.querySelector('.hero-title');
+    if (heroTitle) {
+        const splitIntoLetters = (node) => {
+            const text = node.textContent;
+            node.textContent = '';
+            node.classList.add('word');
+            text.split('').forEach(ch => {
+                if (ch === ' ') {
+                    node.appendChild(document.createTextNode(' '));
+                    return;
+                }
+                const span = document.createElement('span');
+                span.className = 'letter';
+                span.textContent = ch;
+                node.appendChild(span);
+            });
+        };
+        // Le nœud texte "Clément " puis le span .hero-surname "Amaro"
+        // L'espace final est extrait et laissé hors du mot pour garder un point de césure normal.
+        Array.from(heroTitle.childNodes).forEach(node => {
+            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+                const raw = node.textContent;
+                const trimmed = raw.replace(/\s+$/, '');
+                const trailing = raw.slice(trimmed.length);
+                const span = document.createElement('span');
+                span.textContent = trimmed;
+                heroTitle.replaceChild(span, node);
+                splitIntoLetters(span);
+                if (trailing) {
+                    span.after(document.createTextNode(trailing));
+                }
+            } else if (node.nodeType === Node.ELEMENT_NODE && node.classList.contains('hero-surname')) {
+                splitIntoLetters(node);
+            }
+        });
+    }
+
+    if (!isTouch) {
+        // --- Curseur personnalisé ---
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorRing = document.querySelector('.cursor-ring');
+        if (cursorDot && cursorRing) {
+            let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+            let ringX = mouseX, ringY = mouseY;
+
+            window.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+            });
+
+            const animateRing = () => {
+                ringX += (mouseX - ringX) * 0.15;
+                ringY += (mouseY - ringY) * 0.15;
+                cursorRing.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+                requestAnimationFrame(animateRing);
+            };
+            animateRing();
+
+            const hoverTargets = 'a, button, .project-card, .subproject-item, .btn';
+            document.addEventListener('mouseover', (e) => {
+                if (e.target.closest(hoverTargets)) cursorRing.classList.add('is-hover');
+            });
+            document.addEventListener('mouseout', (e) => {
+                if (e.target.closest(hoverTargets)) cursorRing.classList.remove('is-hover');
+            });
+        }
+
+        // --- Effet magnétique sur les boutons ---
+        document.querySelectorAll('.btn, .contact-btn').forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const relX = e.clientX - rect.left - rect.width / 2;
+                const relY = e.clientY - rect.top - rect.height / 2;
+                btn.style.transform = `translate(${relX * 0.25}px, ${relY * 0.3}px)`;
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = '';
+            });
+        });
+
+        // --- Parallax léger du halo derrière le hero ---
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.addEventListener('mousemove', (e) => {
+                const rect = hero.getBoundingClientRect();
+                const relX = ((e.clientX - rect.left) / rect.width - 0.5) * 30;
+                const relY = ((e.clientY - rect.top) / rect.height - 0.5) * 30;
+                hero.style.setProperty('--mx', relX.toFixed(2));
+                hero.style.setProperty('--my', relY.toFixed(2));
+            });
+        }
+    }
+})();
