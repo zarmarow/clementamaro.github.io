@@ -12,6 +12,11 @@
 </head>
 <body>
 
+    <!-- Grain & Cursor (decorative) -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
@@ -38,9 +43,16 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-deco" aria-hidden="true">
+            <span class="deco-shape deco-1">✦</span>
+            <span class="deco-shape deco-2">●</span>
+            <span class="deco-shape deco-3">▲</span>
+            <span class="deco-shape deco-4">✦</span>
+            <span class="deco-shape deco-5">○</span>
+        </div>
         <div class="container hero-content">
             <div class="hero-tag reveal"><span data-i18n="hero.tag">Disponible immédiatement — CDD / CDI</span></div>
-            <h1 class="reveal">Clément <span>Amaro</span></h1>
+            <h1 class="reveal hero-title" data-text="Clément Amaro">Clément <span class="hero-surname">Amaro</span></h1>
             <p class="subtitle reveal" data-i18n="hero.subtitle">Design Produit &amp; Infographie 3D</p>
             <p class="description reveal" data-i18n="hero.description">Je conçois des objets et des univers, du croquis à la fabrication physique, du modèle temps réel au rendu photoréaliste. Deux pratiques, une même exigence : la faisabilité, les matériaux et la confrontation au réel — physique ou numérique.</p>
             <div class="hero-buttons reveal">
@@ -62,6 +74,7 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header reveal">
+                <span class="big-num" aria-hidden="true">01</span>
                 <span class="section-num" data-i18n="about.num">(01) — À PROPOS</span>
                 <h2 class="section-title" data-i18n-html="about.title">Deux pratiques,<br><em>une même méthode.</em></h2>
             </div>
@@ -92,6 +105,7 @@
     <section id="projects-produit" class="projects">
         <div class="container">
             <div class="section-header reveal">
+                <span class="big-num" aria-hidden="true">02</span>
                 <span class="section-num" data-i18n="produit.num">(02) — DESIGN PRODUIT</span>
                 <h2 class="section-title" data-i18n-html="produit.title">Conceptions<br><em>tangibles.</em></h2>
             </div>
@@ -187,6 +201,7 @@
     <section id="projects-3d" class="projects">
         <div class="container">
             <div class="section-header reveal">
+                <span class="big-num" aria-hidden="true">03</span>
                 <span class="section-num" data-i18n="parcours3d.num">(03) — INFOGRAPHIE 3D</span>
                 <h2 class="section-title" data-i18n-html="parcours3d.title">Créations<br><em>numériques.</em></h2>
             </div>
@@ -298,8 +313,14 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header reveal">
+                <span class="big-num" aria-hidden="true">04</span>
                 <span class="section-num" data-i18n="contact.num">(04) — CONTACT</span>
                 <h2 class="section-title" data-i18n-html="contact.title">Parlons de<br><em>votre projet.</em></h2>
+            </div>
+            <div class="contact-deco" aria-hidden="true">
+                <span class="deco-shape deco-6">✦</span>
+                <span class="deco-shape deco-7">✦</span>
+                <span class="deco-shape deco-8">●</span>
             </div>
             <div class="contact-content reveal">
                 <p class="contact-cta" data-i18n="contact.cta">Intéressé par une collaboration ou vous souhaitez en savoir plus sur mes projets ? N'hésitez pas à me contacter !</p>

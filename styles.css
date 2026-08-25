@@ -41,7 +41,7 @@ h1, h2, h3, h4 {
 }
 
 h1 { font-size: clamp(60px, 13vw, 200px); margin-top: 40px; }
-h1 span { font-style: italic; color: var(--muted); }
+.hero-surname { font-style: italic; color: var(--muted); }
 h2 { font-size: clamp(40px, 6vw, 80px); }
 h2 em { font-style: italic; color: var(--muted); }
 
@@ -611,4 +611,223 @@ section { padding: 120px 40px; }
     .section-header { flex-direction: column; align-items: flex-start; }
     
     .project-card:hover .project-image { transform: none; }
+}
+
+/* ================================================================
+   ÉDITION ARTISTIQUE — grain, curseur, formes, typographie éclatée
+   ================================================================ */
+
+:root {
+    --accent-2: #FF6B4A; /* corail chaud */
+    --accent-3: #8B7CFF; /* violet doux */
+    --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Grain overlay — texture papier sur toute la page */
+.grain-overlay {
+    position: fixed; inset: 0; z-index: 300; pointer-events: none;
+    background-image: var(--noise);
+    opacity: 0.045;
+    mix-blend-mode: multiply;
+}
+
+/* Curseur personnalisé */
+.cursor-dot, .cursor-ring {
+    position: fixed; top: 0; left: 0; z-index: 9999;
+    pointer-events: none; border-radius: 50%;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+}
+.cursor-dot { width: 7px; height: 7px; background: var(--ink); }
+.cursor-ring {
+    width: 38px; height: 38px; border: 1px solid var(--ink);
+    mix-blend-mode: difference;
+    transition: width 0.25s ease, height 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+.cursor-ring.is-hover {
+    width: 72px; height: 72px;
+    background: var(--accent);
+    border-color: transparent;
+}
+@media (hover: none), (pointer: coarse) {
+    .cursor-dot, .cursor-ring { display: none; }
+}
+
+/* Formes flottantes décoratives */
+.deco-shape {
+    position: absolute; z-index: 0; pointer-events: none;
+    font-family: 'Instrument Serif', serif;
+    color: var(--accent);
+    animation: floatShape 7s ease-in-out infinite;
+}
+.hero-deco { position: absolute; inset: 0; overflow: hidden; z-index: 0; }
+.deco-1 { top: 18%; left: 6%; font-size: 40px; animation-delay: 0s; color: var(--accent-2); }
+.deco-2 { top: 65%; left: 12%; font-size: 16px; animation-delay: 1.2s; }
+.deco-3 { top: 28%; right: 10%; font-size: 26px; animation-delay: 0.6s; color: var(--accent-3); }
+.deco-4 { top: 75%; right: 16%; font-size: 34px; animation-delay: 2s; }
+.deco-5 { top: 8%; right: 30%; font-size: 14px; animation-delay: 1.6s; color: var(--accent-2); }
+.contact-deco { position: relative; height: 0; }
+.contact-deco .deco-shape { color: var(--accent); opacity: 0.8; }
+.deco-6 { top: -260px; left: 8%; font-size: 30px; }
+.deco-7 { top: -120px; right: 14%; font-size: 22px; color: var(--accent-2); animation-delay: 1s; }
+.deco-8 { top: -180px; right: 40%; font-size: 12px; animation-delay: 2.2s; }
+
+@keyframes floatShape {
+    0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.55; }
+    50% { transform: translateY(-22px) rotate(12deg); opacity: 1; }
+}
+
+/* Halo de couleur derrière le hero, réagit à la souris via variables CSS */
+.hero {
+    --mx: 0; --my: 0;
+    overflow: hidden;
+}
+.hero::before, .hero::after {
+    content: ''; position: absolute; z-index: 0;
+    border-radius: 50%; filter: blur(70px);
+    opacity: 0.5;
+    transition: transform 0.3s ease-out;
+}
+.hero::before {
+    width: 420px; height: 420px; top: -120px; left: -80px;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+    transform: translate(calc(var(--mx) * 1px), calc(var(--my) * 1px));
+    animation: blobDrift 14s ease-in-out infinite alternate;
+}
+.hero::after {
+    width: 500px; height: 500px; bottom: -160px; right: -100px;
+    background: radial-gradient(circle, var(--accent-2) 0%, transparent 70%);
+    opacity: 0.35;
+    transform: translate(calc(var(--mx) * -1px), calc(var(--my) * -1px));
+    animation: blobDrift 18s ease-in-out infinite alternate-reverse;
+}
+@keyframes blobDrift {
+    0% { margin: 0; }
+    100% { margin: 40px 0 0 30px; }
+}
+.hero-content { position: relative; z-index: 1; }
+
+/* Nom en héro : double fantôme + lettres interactives */
+.hero-title { position: relative; }
+.hero-title::before {
+    content: attr(data-text);
+    position: absolute; top: 0; left: 0; right: 0; z-index: -1;
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(14,14,14,0.1);
+    transform: translate(12px, 10px) rotate(-1.2deg);
+}
+.hero-title .word {
+    white-space: nowrap;
+}
+.hero-title .letter {
+    display: inline-block;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+.hero-title .letter:hover {
+    transform: translateY(-0.12em) rotate(-6deg) scale(1.05);
+    color: var(--accent-2);
+}
+
+/* Grands chiffres fantômes dans les en-têtes de section */
+.section-header {
+    position: relative;
+    overflow: visible;
+    padding-top: 10px;
+}
+.big-num {
+    position: absolute;
+    top: -46px; left: -4px;
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: clamp(90px, 12vw, 180px);
+    line-height: 1;
+    color: var(--ink);
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: -1;
+    user-select: none;
+}
+.contact .big-num { color: var(--bg); opacity: 0.06; }
+
+/* Bouton : relief + texture papier légère au survol */
+.btn { position: relative; overflow: hidden; will-change: transform; }
+.btn::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: var(--noise); opacity: 0; mix-blend-mode: overlay;
+    transition: opacity 0.3s;
+}
+.btn:hover::after { opacity: 0.5; }
+
+/* Marquee : mots en dégradé chaud, légère bascule au survol */
+.marquee-track span {
+    background: linear-gradient(90deg, var(--bg) 0%, var(--accent) 50%, var(--bg) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    transition: color 0.3s;
+}
+.marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee-track span::after { color: var(--accent-2); }
+
+/* Bloc "profil hybride" : accent diagonal façon papier découpé */
+.reorientation-box {
+    position: relative;
+    transform: rotate(-0.4deg);
+    box-shadow: 10px 10px 0 rgba(212,255,58,0.15);
+}
+.reorientation-box::before {
+    content: '';
+    position: absolute; top: 0; right: 0;
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 0 34px 34px 0;
+    border-color: transparent var(--accent) transparent transparent;
+    opacity: 0.9;
+}
+
+/* Liste de compétences : petite fantaisie au survol */
+.skills-list li { transition: padding-left 0.3s ease, color 0.3s ease; }
+.skills-list li:hover { padding-left: 12px; color: var(--ink); }
+.skills-list li:hover .num { color: var(--accent-2); transform: translateX(-4px); display: inline-block; }
+.skills-list .num { transition: transform 0.3s ease, color 0.3s ease; }
+
+/* Cartes projets : légère inclinaison alternée + image en duoton */
+.project-card:nth-child(odd) { transform: rotate(-0.6deg); }
+.project-card:nth-child(even) { transform: rotate(0.5deg); }
+.project-card { transition: transform 0.4s ease; }
+.project-card:hover { transform: rotate(0deg) translateY(-8px); }
+
+.project-image { filter: grayscale(0.55) contrast(1.05); transition: filter 0.5s ease, transform 0.5s ease; }
+.project-card:hover .project-image { filter: grayscale(0) saturate(1.15) contrast(1); }
+
+.project-card::before {
+    content: '✦';
+    position: absolute; top: -14px; right: 12px;
+    font-family: 'Instrument Serif', serif; font-size: 22px;
+    color: var(--accent-2);
+    opacity: 0; transform: scale(0.6) rotate(-20deg);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 2; pointer-events: none;
+}
+.project-card:hover::before { opacity: 1; transform: scale(1) rotate(0deg); }
+
+.tags span { transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease; }
+.tags span:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+/* Section contact : typographie flottante */
+.contact { position: relative; overflow: hidden; }
+.contact-cta { position: relative; z-index: 1; }
+
+/* Cache les artifices sur mobile / écrans réduits pour rester lisible */
+@media (max-width: 900px) {
+    .hero-deco, .contact-deco, .cursor-dot, .cursor-ring { display: none; }
+    .hero::before, .hero::after { opacity: 0.25; filter: blur(50px); }
+    .hero-title::before { display: none; }
+    .big-num { display: none; }
+    .project-card:nth-child(odd), .project-card:nth-child(even),
+    .project-card:hover { transform: none; }
+    .reorientation-box { transform: none; box-shadow: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .deco-shape, .hero::before, .hero::after { animation: none !important; }
+    .hero-title .letter, .project-card, .skills-list li, .skills-list .num { transition: none !important; }
 }
