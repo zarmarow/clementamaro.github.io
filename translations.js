@@ -5,49 +5,12 @@ var translations = {
         "nav.produit": "Design Produit",
         "nav.3d": "Infographie 3D",
         "nav.contact": "Contact",
-        "nav.profile": "Profil",
 
         "hero.tag": "Disponible immédiatement — CDD / CDI",
         "hero.subtitle": "Design Produit & Infographie 3D",
         "hero.description": "Je conçois des objets et des univers, du croquis à la fabrication physique, du modèle temps réel au rendu photoréaliste. Deux pratiques, une même exigence : la faisabilité, les matériaux et la confrontation au réel — physique ou numérique.",
-        "hero.viewport.desc": "Designer produit & infographiste 3D. Deux pratiques passées au même viewport : la CAO et le pipeline temps réel — la faisabilité, les matériaux et la confrontation au réel avant tout.",
         "hero.btn1": "Design Produit",
         "hero.btn2": "Infographie 3D",
-
-        "shade.wireframe": "Filaire",
-        "shade.solid": "Solide",
-        "shade.rendered": "Rendu",
-
-        "outliner.scene": "Scène",
-        "outliner.objects": "objets",
-
-        "hud.practices": "Pratiques",
-        "hud.practicesValue": "02 — Produit & Temps Réel",
-        "hud.projects": "Projets scène",
-        "hud.collections": "Collections",
-        "hud.collectionsValue": "Produit / Infographie 3D",
-        "hud.status": "Statut",
-        "hud.available": "Disponible",
-
-        "collection.produit": "Collection 01",
-        "collection.3d": "Collection 02",
-
-        "about.eyebrow": "Propriétés",
-        "about.heading": "Profil",
-        "about.stack": "Stack de compétences",
-
-        "contact.eyebrow": "Sortie",
-        "render.scene": "Scène",
-        "render.objects": "Objets",
-        "render.assets": "assets",
-        "render.status": "Statut",
-        "render.ready": "Prêt à contacter",
-
-        "insp.prev": "Précédent",
-        "insp.next": "Suivant",
-        "insp.empty": "Sélectionnez un objet dans la scène pour afficher ses propriétés.",
-
-        "footer.build": "Build",
 
         "marquee.1": "Design Produit",
         "marquee.2": "CAO & NURBS",
@@ -258,49 +221,12 @@ var translations = {
         "nav.produit": "Product Design",
         "nav.3d": "3D Art",
         "nav.contact": "Contact",
-        "nav.profile": "Profile",
 
         "hero.tag": "Available immediately — Fixed-term / Permanent",
         "hero.subtitle": "Product Design & 3D Art",
         "hero.description": "I design objects and worlds, from sketch to physical fabrication, from real-time model to photorealistic render. Two practices, one same standard: feasibility, materials, and confronting reality — physical or digital.",
-        "hero.viewport.desc": "Product designer & 3D artist. Two practices run through the same viewport: CAD and the real-time pipeline — feasibility, materials, and confronting reality above all.",
         "hero.btn1": "Product Design",
         "hero.btn2": "3D Art",
-
-        "shade.wireframe": "Wireframe",
-        "shade.solid": "Solid",
-        "shade.rendered": "Rendered",
-
-        "outliner.scene": "Scene",
-        "outliner.objects": "objects",
-
-        "hud.practices": "Practices",
-        "hud.practicesValue": "02 — Product & Real-Time",
-        "hud.projects": "Scene projects",
-        "hud.collections": "Collections",
-        "hud.collectionsValue": "Product / 3D Art",
-        "hud.status": "Status",
-        "hud.available": "Available",
-
-        "collection.produit": "Collection 01",
-        "collection.3d": "Collection 02",
-
-        "about.eyebrow": "Properties",
-        "about.heading": "Profile",
-        "about.stack": "Skills stack",
-
-        "contact.eyebrow": "Output",
-        "render.scene": "Scene",
-        "render.objects": "Objects",
-        "render.assets": "assets",
-        "render.status": "Status",
-        "render.ready": "Ready to contact",
-
-        "insp.prev": "Previous",
-        "insp.next": "Next",
-        "insp.empty": "Select an object in the scene to view its properties.",
-
-        "footer.build": "Build",
 
         "marquee.1": "Product Design",
         "marquee.2": "CAD & NURBS",
