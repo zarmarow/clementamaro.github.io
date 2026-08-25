@@ -789,14 +789,11 @@ section { padding: 120px 40px; }
 .skills-list li:hover .num { color: var(--accent-2); transform: translateX(-4px); display: inline-block; }
 .skills-list .num { transition: transform 0.3s ease, color 0.3s ease; }
 
-/* Cartes projets : légère inclinaison alternée + image en duoton */
+/* Cartes projets : légère inclinaison alternée */
 .project-card:nth-child(odd) { transform: rotate(-0.6deg); }
 .project-card:nth-child(even) { transform: rotate(0.5deg); }
 .project-card { transition: transform 0.4s ease; }
 .project-card:hover { transform: rotate(0deg) translateY(-8px); }
-
-.project-image { filter: grayscale(0.55) contrast(1.05); transition: filter 0.5s ease, transform 0.5s ease; }
-.project-card:hover .project-image { filter: grayscale(0) saturate(1.15) contrast(1); }
 
 .project-card::before {
     content: '✦';
