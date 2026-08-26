@@ -789,11 +789,9 @@ section { padding: 120px 40px; }
 .skills-list li:hover .num { color: var(--accent-2); transform: translateX(-4px); display: inline-block; }
 .skills-list .num { transition: transform 0.3s ease, color 0.3s ease; }
 
-/* Cartes projets : légère inclinaison alternée */
-.project-card:nth-child(odd) { transform: rotate(-0.6deg); }
-.project-card:nth-child(even) { transform: rotate(0.5deg); }
+/* Cartes projets */
 .project-card { transition: transform 0.4s ease; }
-.project-card:hover { transform: rotate(0deg) translateY(-8px); }
+.project-card:hover { transform: translateY(-8px); }
 
 .project-card::before {
     content: '✦';
@@ -819,7 +817,6 @@ section { padding: 120px 40px; }
     .hero::before, .hero::after { opacity: 0.25; filter: blur(50px); }
     .hero-title::before { display: none; }
     .big-num { display: none; }
-    .project-card:nth-child(odd), .project-card:nth-child(even),
     .project-card:hover { transform: none; }
     .reorientation-box { transform: none; box-shadow: none; }
 }
