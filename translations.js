@@ -48,6 +48,7 @@ var translations = {
         "safran.badge": "Confidentiel",
         "safran.category": "Design Produit — Safran Seats, 2026",
         "safran.title": "Stagiaire Design & Visualisation 3D",
+        "safran.short": "Safran Seats",
         "safran.desc": "Stage en design et visualisation 3D dans l'aéronautique. Contenu confidentiel — détails disponibles sur demande.",
         "safran.tag1": "Visualisation 3D",
         "safran.tag2": "Contraintes Industrielles",
@@ -211,8 +212,18 @@ var translations = {
         "contact.title": "Parlons de<br><em>votre projet.</em>",
         "contact.cta": "Intéressé par une collaboration ou vous souhaitez en savoir plus sur mes projets ? N'hésitez pas à me contacter !",
         "contact.email": "Envoyer un email",
+        "contact.eyebrow": "Sortie",
 
-        "footer.rights": "Tous droits réservés."
+        "nav.profil": "Profil",
+        "nav.travaux": "Travaux",
+        "wall.eyebrow": "Le mur des travaux",
+        "wall.heading": "12 pièces, 2 pratiques",
+        "wall.back": "Retour au mur",
+        "profile.eyebrow": "Fiche — Design Produit / Infographie 3D",
+        "profile.avail": "Disponible — CDD / CDI",
+
+        "footer.rights": "Tous droits réservés.",
+        "footer.count": "12 travaux"
     },
 
     en: {
@@ -264,6 +275,7 @@ var translations = {
         "safran.badge": "Confidential",
         "safran.category": "Product Design — Safran Seats, 2026",
         "safran.title": "Design & 3D Visualization Intern",
+        "safran.short": "Safran Seats",
         "safran.desc": "Internship in design and 3D visualization in aerospace. Confidential content — details available on request.",
         "safran.tag1": "3D Visualization",
         "safran.tag2": "Industrial Constraints",
@@ -427,7 +439,17 @@ var translations = {
         "contact.title": "Let's talk<br><em>about your project.</em>",
         "contact.cta": "Interested in a collaboration or want to know more about my projects? Feel free to reach out!",
         "contact.email": "Send an email",
+        "contact.eyebrow": "Exit",
 
-        "footer.rights": "All rights reserved."
+        "nav.profil": "Profile",
+        "nav.travaux": "Work",
+        "wall.eyebrow": "The wall of work",
+        "wall.heading": "12 pieces, 2 practices",
+        "wall.back": "Back to the wall",
+        "profile.eyebrow": "Profile — Product Design / 3D Art",
+        "profile.avail": "Available — Fixed-term / Permanent",
+
+        "footer.rights": "All rights reserved.",
+        "footer.count": "12 works"
     }
 };
