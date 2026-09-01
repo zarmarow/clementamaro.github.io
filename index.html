@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clément Amaro | Design Produit & Infographie 3D</title>
-    <link rel="stylesheet" href="styles.css?v=20260826">
+    <link rel="stylesheet" href="styles.css?v=20260825">
     <!-- Polices Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Grain & Cursor (decorative) -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
     <!-- Navigation -->
-    <nav class="topbar">
-        <div class="container topbar-inner">
-            <a href="#profil" class="wordmark">Amaro<span>.</span></a>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">CA<span>.</span></a>
             <ul class="nav-links">
-                <li><a href="#profil" data-i18n="nav.profil">Profil</a></li>
-                <li><a href="#travaux" data-i18n="nav.travaux">Travaux</a></li>
+                <li><a href="#home" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="#about" data-i18n="nav.about">À propos</a></li>
+                <li><a href="#projects-produit" data-i18n="nav.produit">Design Produit</a></li>
+                <li><a href="#projects-3d" data-i18n="nav.3d">Infographie 3D</a></li>
                 <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
                 <li class="lang-switch">
                     <button type="button" id="lang-fr" class="active" data-lang="fr">FR</button>
@@ -34,57 +41,303 @@
         </div>
     </nav>
 
-    <div class="grid-wrap" id="gridWrap">
-
-        <!-- Profile Section (first, per site requirement) -->
-        <section id="profil" class="profile">
-            <div class="container">
-                <div class="id-card reveal">
-                    <div class="id-main">
-                        <div class="id-eyebrow" data-i18n="profile.eyebrow">Fiche — Design Produit / Infographie 3D</div>
-                        <h1 class="id-name">Clément<br>Amaro</h1>
-                        <p class="id-bio" data-i18n="about.p1">Designer produit et infographiste 3D, je conçois de l'idée à l'objet fini — que cet objet soit physique ou destiné au temps réel. Sketch, modélisation 3D, CAO, rendu, prototypage : je maîtrise l'ensemble de la chaîne.</p>
-                        <p class="id-bio" data-i18n-html="about.box.p2">Là où l'IA générative produit des images, je me concentre sur ce qui reste irremplaçable : <strong>la faisabilité, les matériaux et la confrontation au réel</strong>.</p>
-                        <div class="chip-row" id="skillChips"></div>
-                    </div>
-                    <div class="id-side">
-                        <div class="avail"><span class="dot"></span><span data-i18n="profile.avail">Disponible — CDD / CDI</span></div>
-                        <p data-i18n-html="about.p2"><strong>Ma polyvalence est mon atout majeur.</strong> Issu d'un Master en 3D Temps Réel, j'ai appliqué cette expertise à la fabrication physique (Rhino, Fusion 360, prototypage bois) tout comme à des projets d'infographie 3D exigeants — visite virtuelle patrimoniale, pipeline jeu vidéo complet.</p>
-                    </div>
-                </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-deco" aria-hidden="true">
+            <span class="deco-shape deco-1">✦</span>
+            <span class="deco-shape deco-2">●</span>
+            <span class="deco-shape deco-3">▲</span>
+            <span class="deco-shape deco-4">✦</span>
+            <span class="deco-shape deco-5">○</span>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-tag reveal"><span data-i18n="hero.tag">Disponible immédiatement — CDD / CDI</span></div>
+            <h1 class="reveal hero-title" data-text="Clément Amaro">Clément <span class="hero-surname">Amaro</span></h1>
+            <p class="subtitle reveal" data-i18n="hero.subtitle">Design Produit &amp; Infographie 3D</p>
+            <p class="description reveal" data-i18n="hero.description">Je conçois des objets et des univers, du croquis à la fabrication physique, du modèle temps réel au rendu photoréaliste. Deux pratiques, une même exigence : la faisabilité, les matériaux et la confrontation au réel — physique ou numérique.</p>
+            <div class="hero-buttons reveal">
+                <a href="#projects-produit" class="btn btn-primary" data-i18n="hero.btn1">Design Produit</a>
+                <a href="#projects-3d" class="btn btn-secondary" data-i18n="hero.btn2">Infographie 3D</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Travaux Section (bento wall, rendered by JS) -->
-        <section id="travaux" class="section">
-            <div class="container">
-                <div class="section-head reveal">
-                    <div><span class="eyebrow" data-i18n="wall.eyebrow">Le mur des travaux</span><h2 data-i18n="wall.heading">12 pièces, 2 pratiques</h2></div>
-                </div>
-                <div class="bento" id="bento"></div>
-            </div>
-        </section>
-
+    <!-- Marquee (Bandeau défilant) -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span data-i18n="marquee.1">Design Produit</span><span data-i18n="marquee.2">CAO &amp; NURBS</span><span data-i18n="marquee.3">Rendu Photoréaliste</span><span data-i18n="marquee.4">Prototypage Physique</span><span data-i18n="marquee.5">Modélisation Temps Réel</span><span data-i18n="marquee.6">Contraintes de Fabrication</span>
+            <span data-i18n="marquee.1">Design Produit</span><span data-i18n="marquee.2">CAO &amp; NURBS</span><span data-i18n="marquee.3">Rendu Photoréaliste</span><span data-i18n="marquee.4">Prototypage Physique</span><span data-i18n="marquee.5">Modélisation Temps Réel</span><span data-i18n="marquee.6">Contraintes de Fabrication</span>
+        </div>
     </div>
 
-    <!-- Stage view (project / group detail, rendered by JS) -->
-    <div class="stage-wrap" id="stageWrap"></div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="big-num" aria-hidden="true">01</span>
+                <span class="section-num" data-i18n="about.num">(01) — À PROPOS</span>
+                <h2 class="section-title" data-i18n-html="about.title">Deux pratiques,<br><em>une même méthode.</em></h2>
+            </div>
+            <div class="about-content reveal">
+                <div class="about-text">
+                    <p data-i18n="about.p1">Designer produit et infographiste 3D, je conçois de l'idée à l'objet fini — que cet objet soit physique ou destiné au temps réel. Sketch, modélisation 3D, CAO, rendu, prototypage : je maîtrise l'ensemble de la chaîne.</p>
+                    <p data-i18n-html="about.p2"><strong>Ma polyvalence est mon atout majeur.</strong> Issu d'un Master en 3D Temps Réel, j'ai appliqué cette expertise à la fabrication physique (Rhino, Fusion 360, prototypage bois) tout comme à des projets d'infographie 3D exigeants — visite virtuelle patrimoniale, pipeline jeu vidéo complet.</p>
+
+                    <div class="reorientation-box">
+                        <h3 data-i18n="about.box.title">Un profil hybride, assumé</h3>
+                        <p data-i18n="about.box.p1">Je ne choisis pas entre le produit et le numérique : les deux pratiques se nourrissent. La rigueur de la CAO m'a rendu plus précis en 3D temps réel ; la maîtrise du pipeline temps réel me rend plus rapide et plus rigoureux en visualisation produit.</p>
+                        <p data-i18n-html="about.box.p2">Là où l'IA générative produit des images, je me concentre sur ce qui reste irremplaçable : <strong>la faisabilité, les matériaux et la confrontation au réel</strong>.</p>
+                    </div>
+                </div>
+                <ul class="skills-list">
+                    <li><span data-i18n="skills.1">Conception &amp; Idéation</span><span class="num">/01</span></li>
+                    <li><span data-i18n="skills.2">Modélisation NURBS &amp; Mesh</span><span class="num">/02</span></li>
+                    <li><span data-i18n="skills.3">Rendu Photoréaliste</span><span class="num">/03</span></li>
+                    <li><span data-i18n="skills.4">Prototypage &amp; Fabrication</span><span class="num">/04</span></li>
+                    <li><span data-i18n="skills.5">Pipeline Temps Réel</span><span class="num">/05</span></li>
+                    <li><span data-i18n="skills.6">Gestion de Projet</span><span class="num">/06</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Produit Section -->
+    <section id="projects-produit" class="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="big-num" aria-hidden="true">02</span>
+                <span class="section-num" data-i18n="produit.num">(02) — DESIGN PRODUIT</span>
+                <h2 class="section-title" data-i18n-html="produit.title">Conceptions<br><em>tangibles.</em></h2>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Safran Seats -->
+                <article class="project-card reveal" data-modal="modal-safran">
+                    <div class="project-image confidential">
+                        <div class="confidential-mark">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="4" y="10" width="16" height="10" rx="1"/>
+                                <path d="M8 10V7a4 4 0 018 0v3"/>
+                            </svg>
+                            <span data-i18n="safran.badge">Confidentiel</span>
+                        </div>
+                        <div class="overlay">
+                            <span class="view-project" data-i18n="common.view">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category" data-i18n="safran.category">Design Produit — Safran Seats, 2026</div>
+                        <h3 data-i18n="safran.title">Stagiaire Design &amp; Visualisation 3D</h3>
+                        <p data-i18n="safran.desc">Stage en design et visualisation 3D dans l'aéronautique. Contenu confidentiel — détails disponibles sur demande.</p>
+                        <div class="tags">
+                            <span data-i18n="safran.tag1">Visualisation 3D</span>
+                            <span data-i18n="safran.tag2">Contraintes Industrielles</span>
+                            <span data-i18n="safran.tag3">CAO</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Ébénisterie -->
+                <article class="project-card reveal" data-modal="modal-ebenisterie">
+                    <div class="project-image gallery-placeholder">
+                        <span data-i18n="common.soon">À venir</span>
+                        <div class="overlay">
+                            <span class="view-project" data-i18n="common.view">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category" data-i18n="ebenisterie.category">Design Produit — Fabrication</div>
+                        <h3 data-i18n="ebenisterie.title">Ébénisterie</h3>
+                        <p data-i18n="ebenisterie.desc">Conception et fabrication d'un meuble, de la modélisation à l'assemblage final.</p>
+                        <div class="tags">
+                            <span>Fusion 360</span>
+                            <span data-i18n="ebenisterie.tag2">Fabrication bois</span>
+                            <span data-i18n="ebenisterie.tag3">Plans techniques</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Infographie 3D Section -->
+    <section id="projects-3d" class="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="big-num" aria-hidden="true">03</span>
+                <span class="section-num" data-i18n="parcours3d.num">(03) — INFOGRAPHIE 3D</span>
+                <h2 class="section-title" data-i18n-html="parcours3d.title">Créations<br><em>numériques.</em></h2>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Rendu d'espace -->
+                <article class="project-card reveal" data-modal="modal-espace">
+                    <div class="project-image gallery-placeholder">
+                        <span data-i18n="common.soon">À venir</span>
+                        <div class="overlay">
+                            <span class="view-project" data-i18n="common.view">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category" data-i18n="espace.category">Design d'Intérieur</div>
+                        <h3 data-i18n="espace.title">Rendu d'espace</h3>
+                        <p data-i18n="espace.desc">Conception d'un espace et rendu photoréaliste : mobilier, agencement, lumière.</p>
+                        <div class="tags">
+                            <span>Blender</span>
+                            <span data-i18n="espace.tag2">Rendu photoréaliste</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Crypte Sainte-Catherine -->
+                <article class="project-card reveal" data-modal="modal-crypte">
+                    <div class="project-image gallery-placeholder">
+                        <span data-i18n="common.soon">À venir</span>
+                        <div class="overlay">
+                            <span class="view-project" data-i18n="common.view">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category" data-i18n="crypte.category">Patrimoine &amp; VR — 2025</div>
+                        <h3 data-i18n="crypte.title">Crypte Sainte-Catherine</h3>
+                        <p data-i18n="crypte.desc">Visite virtuelle VR de Tonnerre avec photogrammétrie et optimisation.</p>
+                        <div class="tags">
+                            <span data-i18n="crypte.tag1">Photogrammétrie</span>
+                            <span>VR</span>
+                            <span data-i18n="crypte.tag3">Optimisation</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Sculpting Organique -->
+                <article class="project-card reveal" data-modal="modal-mushroom">
+                    <div class="project-image gallery-placeholder">
+                        <span data-i18n="common.soon">À venir</span>
+                        <div class="overlay">
+                            <span class="view-project" data-i18n="common.view">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="category" data-i18n="mushroom.category">Exercice — 2024</div>
+                        <h3 data-i18n="mushroom.title">Sculpting Organique</h3>
+                        <p data-i18n="mushroom.desc">Sculpting de champignon sur ZBrush avec itérations Dynamesh progressives.</p>
+                        <div class="tags">
+                            <span>ZBrush</span>
+                            <span>Dynamesh</span>
+                            <span data-i18n="mushroom.tag3">Organique</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blue Stinger Remake Mega-Project -->
+                <article class="project-card reveal bluestinger-mega" style="grid-column: 1 / -1;">
+                    <div class="project-image gallery-placeholder">
+                        <span data-i18n="common.soon">À venir</span>
+                        <div class="overlay">
+                            <span class="view-project" data-i18n="bluestinger.badge">Projet complet</span>
+                        </div>
+                    </div>
+                    <div class="project-info mega-project-header">
+                        <div class="category" data-i18n="bluestinger.category">Jeu Vidéo · Blue Stinger Remake — 2024</div>
+                        <h3 data-i18n="bluestinger.title">Blue Stinger Remake</h3>
+                        <p class="mega-desc" data-i18n="bluestinger.desc">Deux contributions pour le remake du jeu Blue Stinger : la modélisation d'un objet produit crédible et la création complète d'un personnage, du sculpt au texturing final.</p>
+                    </div>
+                    <div class="subprojects-grid">
+                        <div class="subproject-item" data-modal="modal-dispenser">
+                            <div class="subproject-thumb gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                            <h4 data-i18n="dispenser.title">Food Dispenser</h4>
+                            <p data-i18n="dispenser.desc">Modélisation d'un objet produit, de la recherche de références au texturing final.</p>
+                        </div>
+                        <div class="subproject-item" data-modal="modal-character">
+                            <div class="subproject-thumb gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                            <h4 data-i18n="character.title">Personnage "Dogs Bower"</h4>
+                            <p data-i18n="character.desc">Création complète de personnage avec Character Creator, Marvelous Designer, Blender.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Foxtrot Mega-Project -->
+                <article class="project-card reveal foxtrot-mega" style="grid-column: 1 / -1;">
+                    <div class="project-image gallery-placeholder">
+                        <span data-i18n="common.soon">À venir</span>
+                        <div class="overlay">
+                            <span class="view-project" data-i18n="foxtrot.badge">Projet complet</span>
+                        </div>
+                    </div>
+                    <div class="project-info mega-project-header">
+                        <div class="category" data-i18n="foxtrot.category">Metaverse · Projet Foxtrot — 2023-2025</div>
+                        <h3 data-i18n="foxtrot.title">Foxtrot</h3>
+                        <p class="mega-desc" data-i18n="foxtrot.desc">Projet de metaverse mené en équipe sur deux ans : pipeline 3D temps réel complet, de la modélisation d'assets à l'UX/UI, en passant par la production d'assets marketing pour une campagne Kickstarter.</p>
+                    </div>
+                    <div class="subprojects-grid">
+                        <div class="subproject-item" data-modal="modal-mk18">
+                            <div class="subproject-thumb gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                            <h4 data-i18n="foxtrot.mk18.title">Asset Modulaire MK18</h4>
+                            <p data-i18n="foxtrot.mk18.desc">Modélisation hard surface, structure modulaire et texturing.</p>
+                        </div>
+                        <div class="subproject-item" data-modal="modal-smartmat">
+                            <div class="subproject-thumb gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                            <h4 data-i18n="foxtrot.smartmat.title">Smart Materials</h4>
+                            <p data-i18n="foxtrot.smartmat.desc">Bibliothèque de matériaux pour accélérer le texturing.</p>
+                        </div>
+                        <div class="subproject-item" data-modal="modal-avatar">
+                            <div class="subproject-thumb gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                            <h4 data-i18n="foxtrot.avatar.title">Avatar Personnalisable</h4>
+                            <p data-i18n="foxtrot.avatar.desc">Low poly, baking, optimisation mobile.</p>
+                        </div>
+                        <div class="subproject-item" data-modal="modal-uxui">
+                            <div class="subproject-thumb gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                            <h4 data-i18n="foxtrot.uxui.title">UX/UI Design</h4>
+                            <p data-i18n="foxtrot.uxui.desc">Interface Figma, navigation et responsive.</p>
+                        </div>
+                        <div class="subproject-item" data-modal="modal-marketing">
+                            <div class="subproject-thumb gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                            <h4 data-i18n="foxtrot.marketing.title">Assets Marketing</h4>
+                            <p data-i18n="foxtrot.marketing.desc">Campagne Kickstarter et réseaux sociaux.</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <div class="contact-card reveal">
-                <div>
-                    <div class="eyebrow" data-i18n="contact.eyebrow">Sortie</div>
-                    <h2 data-i18n-html="contact.title">Parlons de<br><em>votre projet.</em></h2>
-                    <p data-i18n="contact.cta">Intéressé par une collaboration ou vous souhaitez en savoir plus sur mes projets ? N'hésitez pas à me contacter !</p>
-                </div>
-                <div class="contact-actions">
-                    <a class="cta primary" href="mailto:contact@clementamaro.com">
-                        <span data-i18n="contact.email">Envoyer un email</span><span>↗</span>
+            <div class="section-header reveal">
+                <span class="big-num" aria-hidden="true">04</span>
+                <span class="section-num" data-i18n="contact.num">(04) — CONTACT</span>
+                <h2 class="section-title" data-i18n-html="contact.title">Parlons de<br><em>votre projet.</em></h2>
+            </div>
+            <div class="contact-deco" aria-hidden="true">
+                <span class="deco-shape deco-6">✦</span>
+                <span class="deco-shape deco-7">✦</span>
+                <span class="deco-shape deco-8">●</span>
+            </div>
+            <div class="contact-content reveal">
+                <p class="contact-cta" data-i18n="contact.cta">Intéressé par une collaboration ou vous souhaitez en savoir plus sur mes projets ? N'hésitez pas à me contacter !</p>
+                <div class="contact-links">
+                    <a href="mailto:contact@clementamaro.com" class="contact-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <span data-i18n="contact.email">Envoyer un email</span>
                     </a>
-                    <a class="cta ghost" href="#"><span>LinkedIn</span><span>↗</span></a>
-                    <a class="cta ghost" href="#"><span>GitHub</span><span>↗</span></a>
+                    <a href="#" class="contact-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="#" class="contact-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.481 1.236-3.36-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.879 1.235 2.049 1.235 3.36 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
                 </div>
             </div>
         </div>
@@ -92,13 +345,620 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-inner">
+        <div class="container">
             <p>&copy; 2026 Clément Amaro. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
-            <span data-i18n="footer.count">12 travaux</span>
         </div>
     </footer>
 
-    <script src="translations.js?v=20260826"></script>
-    <script src="script.js?v=20260826"></script>
+    <!-- ============================================ -->
+    <!-- MODALS -->
+    <!-- ============================================ -->
+
+    <!-- Modal Safran Seats -->
+    <div id="modal-safran" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-safran')">&times;</button>
+            <div class="modal-header">
+                <div class="cat" data-i18n="safran.category">Design Produit — Safran Seats, 2026</div>
+                <h2 data-i18n="safran.title">Stagiaire Design &amp; Visualisation 3D</h2>
+                <p data-i18n="safran.modal.intro">Stage réalisé au sein de Safran Seats, dans le secteur aéronautique. Pour des raisons de confidentialité industrielle, le contenu détaillé de ce projet n'est pas publiable en ligne.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery-main confidential">
+                    <div class="confidential-mark">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="4" y="10" width="16" height="10" rx="1"/>
+                            <path d="M8 10V7a4 4 0 018 0v3"/>
+                        </svg>
+                        <span data-i18n="safran.badge">Confidentiel</span>
+                    </div>
+                </div>
+                <div class="modal-sections">
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.context">Contexte &amp; objectif</h3>
+                        <p data-i18n="safran.modal.context">Stage de fin d'études au sein du bureau d'études de Safran Seats, sur des missions de design et de visualisation 3D appliquées à des équipements aéronautiques, secteur soumis à des normes de certification strictes.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.role">Mon rôle</h3>
+                        <p data-i18n="safran.modal.role">Support de design et visualisation 3D en collaboration directe avec les équipes ingénierie, avec des propositions de conception intégrant dès l'amont les contraintes normatives et industrielles.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
+                        <ul>
+                            <li data-i18n="safran.modal.li1">Propositions de design intégrant les contraintes techniques et normatives du secteur aéronautique</li>
+                            <li data-i18n="safran.modal.li2">Visualisation 3D en environnement CAO professionnel</li>
+                            <li data-i18n="safran.modal.li3">Collaboration avec les équipes d'ingénierie sur des problématiques techniques</li>
+                        </ul>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.result">Résultat &amp; ce que j'en retiens</h3>
+                        <p data-i18n="safran.modal.result">Expérience d'un design exercé sous forte contrainte, où la créativité s'exprime dans la résolution du problème technique plutôt que dans sa mise de côté. Rigueur normative et capacité de proposition : deux compétences directement transférables au design produit.</p>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Rhinoceros 3D</span>
+                            <span>Blender</span>
+                            <span>Procreate</span>
+                            <span>Photoshop</span>
+                        </div>
+                        <p style="margin-top:20px; font-size:14px; color:var(--muted);" data-i18n="safran.modal.footer">Détails complets disponibles sur demande, dans le respect des règles de confidentialité de l'entreprise.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Ébénisterie -->
+    <div id="modal-ebenisterie" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-ebenisterie')">&times;</button>
+            <div class="modal-header">
+                <div class="cat" data-i18n="ebenisterie.category">Design Produit — Fabrication</div>
+                <h2 data-i18n="ebenisterie.title">Ébénisterie</h2>
+                <p data-i18n="ebenisterie.modal.intro">Conception et fabrication d'un meuble en appliquant un processus alliant design et réalisation concrète.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery-main gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                <div class="modal-gallery-thumbs">
+                    <button type="button" class="active gallery-placeholder" onclick="setGalleryImage('modal-ebenisterie', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-ebenisterie', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-ebenisterie', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                </div>
+                <div class="modal-sections">
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.context">Contexte &amp; objectif</h3>
+                        <p data-i18n="ebenisterie.modal.context">Projet personnel visant à sortir du tout-numérique et à confronter une conception à la réalité physique de la fabrication : contraintes de matériaux, d'assemblage et d'outillage.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.role">Mon rôle</h3>
+                        <p data-i18n="ebenisterie.modal.role">Conception complète en solo, de l'idée au meuble fini : design, plans techniques, choix des matériaux, découpe et assemblage.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
+                        <ul>
+                            <li data-i18n="ebenisterie.modal.li1">Conception d'un design fonctionnel et esthétique</li>
+                            <li data-i18n="ebenisterie.modal.li2">Réalisation de plans techniques détaillés</li>
+                            <li data-i18n="ebenisterie.modal.li3">Sélection des matériaux et techniques d'assemblage</li>
+                            <li data-i18n="ebenisterie.modal.li4">Fabrication et finition du meuble</li>
+                        </ul>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.result">Résultat &amp; ce que j'en retiens</h3>
+                        <p data-i18n="ebenisterie.modal.result">Un meuble fonctionnel et livré, qui m'a appris à concevoir en intégrant dès le départ les contraintes réelles de fabrication — une discipline que je retrouve directement utile en design produit.</p>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Fusion 360</span>
+                            <span>Blender</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Food Dispenser -->
+    <div id="modal-dispenser" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-dispenser')">&times;</button>
+            <div class="modal-header">
+                <div class="cat" data-i18n="dispenser.category">Design Produit — Blue Stinger Remake</div>
+                <h2 data-i18n="dispenser.title">Food Dispenser</h2>
+                <p data-i18n="dispenser.modal.intro">Création d'un distributeur pour le remake de Blue Stinger, avec un processus détaillé pour garantir un modèle réaliste.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery-main gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                <div class="modal-gallery-thumbs">
+                    <button type="button" class="active gallery-placeholder" onclick="setGalleryImage('modal-dispenser', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-dispenser', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-dispenser', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                </div>
+                <div class="modal-sections">
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.context">Contexte &amp; objectif</h3>
+                        <p data-i18n="dispenser.modal.context">Projet réalisé dans le cadre du remake du jeu Blue Stinger : concevoir un objet crédible en tant que produit, avec une vraie logique de design d'objet plutôt qu'un simple asset de décor.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.role">Mon rôle</h3>
+                        <p data-i18n="dispenser.modal.role">Modélisation complète de l'objet, de la recherche de références au texturing final, en autonomie.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
+                        <ul>
+                            <li data-i18n="dispenser.modal.li1">Recherche de références &amp; respect de la direction artistique</li>
+                            <li data-i18n="dispenser.modal.li2">Modélisation high poly</li>
+                            <li data-i18n="dispenser.modal.li3">Low poly &amp; UV</li>
+                            <li data-i18n="dispenser.modal.li4">Texturing</li>
+                        </ul>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.result">Résultat &amp; ce que j'en retiens</h3>
+                        <p data-i18n="dispenser.modal.result">Un objet intégré au jeu, qui montre ma capacité à penser un asset comme un vrai produit — fonction, ergonomie perçue, cohérence visuelle — au-delà du simple rendu esthétique.</p>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Blender</span>
+                            <span>Substance Painter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Rendu d'espace -->
+    <div id="modal-espace" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-espace')">&times;</button>
+            <div class="modal-header">
+                <div class="cat" data-i18n="espace.category">Design d'Intérieur</div>
+                <h2 data-i18n="espace.title">Rendu d'espace</h2>
+                <p data-i18n="espace.modal.intro">Conception d'un espace et réalisation d'un rendu photoréaliste.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery-main gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                <div class="modal-gallery-thumbs">
+                    <button type="button" class="active gallery-placeholder" onclick="setGalleryImage('modal-espace', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-espace', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-espace', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                </div>
+                <div class="modal-sections">
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.context">Contexte &amp; objectif</h3>
+                        <p data-i18n="espace.modal.context">Exercice de conception d'un espace intérieur avec pour objectif un rendu photoréaliste final, en travaillant la mise en scène, la lumière et le choix du mobilier.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.role">Mon rôle</h3>
+                        <p data-i18n="espace.modal.role">Conception de l'espace et exécution complète du rendu, du modeling à l'éclairage final.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
+                        <ul>
+                            <li data-i18n="espace.modal.li1">Conception d'un espace fonctionnel et esthétique</li>
+                            <li data-i18n="espace.modal.li2">Modélisation 3D détaillée des éléments</li>
+                            <li data-i18n="espace.modal.li3">Mise en lumière et texturage pour un réalisme accru</li>
+                            <li data-i18n="espace.modal.li4">Réalisation du rendu photoréaliste final</li>
+                        </ul>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.result">Résultat &amp; ce que j'en retiens</h3>
+                        <p data-i18n="espace.modal.result">Un rendu photoréaliste maîtrisé de bout en bout, qui démontre ma capacité à gérer l'éclairage et la mise en scène d'un espace — compétence directement utile pour de la visualisation produit en contexte professionnel.</p>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Blender</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Crypte -->
+    <div id="modal-crypte" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-crypte')">&times;</button>
+            <div class="modal-header">
+                <div class="cat" data-i18n="crypte.category">Patrimoine &amp; VR — 2025</div>
+                <h2 data-i18n="crypte.title">Crypte Sainte-Catherine</h2>
+                <p data-i18n="crypte.modal.intro">Visite virtuelle en VR de la Crypte Sainte-Catherine à Tonnerre.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery-main gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                <div class="modal-gallery-thumbs">
+                    <button type="button" class="active gallery-placeholder" onclick="setGalleryImage('modal-crypte', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-crypte', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-crypte', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                </div>
+                <div class="modal-sections">
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.context">Contexte &amp; objectif</h3>
+                        <p data-i18n="crypte.modal.context">Projet de valorisation patrimoniale : reconstituer numériquement la Crypte Sainte-Catherine de Tonnerre pour une visite virtuelle en VR, à partir d'un relevé par photogrammétrie.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.role">Mon rôle</h3>
+                        <p data-i18n="crypte.modal.role">Prise de vue et traitement photogrammétrique, modélisation, baking et rattrapage des textures pour un rendu fidèle au site réel.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
+                        <ul>
+                            <li data-i18n="crypte.modal.li1">Photogrammétrie</li>
+                            <li data-i18n="crypte.modal.li2">Modélisation</li>
+                            <li data-i18n="crypte.modal.li3">Baking des textures</li>
+                            <li data-i18n="crypte.modal.li4">Rattrapage des textures avec Photoshop</li>
+                        </ul>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.result">Résultat &amp; ce que j'en retiens</h3>
+                        <p data-i18n="crypte.modal.result">Une visite VR fonctionnelle d'un lieu patrimonial réel, qui démontre ma capacité à partir de données du monde physique (photogrammétrie) pour produire un contenu 3D exploitable et fidèle.</p>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>3DZephyr</span>
+                            <span>3DS MAX</span>
+                            <span>Unity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Mushroom -->
+    <div id="modal-mushroom" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-mushroom')">&times;</button>
+            <div class="modal-header">
+                <div class="cat" data-i18n="mushroom.category">Exercice — 2024</div>
+                <h2 data-i18n="mushroom.title">Sculpting Organique</h2>
+                <p data-i18n="mushroom.modal.intro">Exercice de sculpting d'un champignon sur ZBrush.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery-main gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                <div class="modal-gallery-thumbs">
+                    <button type="button" class="active gallery-placeholder" onclick="setGalleryImage('modal-mushroom', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-mushroom', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-mushroom', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                </div>
+                <div class="modal-sections">
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.context">Contexte &amp; objectif</h3>
+                        <p data-i18n="mushroom.modal.context">Exercice technique de sculpting organique, destiné à travailler la lecture des formes naturelles et la maîtrise du Dynamesh sous ZBrush.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.role">Mon rôle</h3>
+                        <p data-i18n="mushroom.modal.role">Exercice réalisé en solo, de la recherche de références au sculpt final.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
+                        <ul>
+                            <li data-i18n="mushroom.modal.li1">Recherche de références</li>
+                            <li data-i18n="mushroom.modal.li2">Modélisation high poly avec Dynamesh</li>
+                            <li data-i18n="mushroom.modal.li3">Affinage des formes et détails</li>
+                        </ul>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.result">Résultat &amp; ce que j'en retiens</h3>
+                        <p data-i18n="mushroom.modal.result">Un exercice qui a renforcé ma maîtrise du sculpting organique — un complément utile à mes compétences hard surface, pour aborder des formes plus naturelles quand un projet le demande.</p>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>ZBrush</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Character Dogs Bower -->
+    <div id="modal-character" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-character')">&times;</button>
+            <div class="modal-header">
+                <div class="cat" data-i18n="character.category">Jeu Vidéo · Blue Stinger Remake — 2024</div>
+                <h2 data-i18n="character.title">Personnage "Dogs Bower"</h2>
+                <p data-i18n="character.modal.intro">Création complète de personnage dans le remake de Blue Stinger.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery-main gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                <div class="modal-gallery-thumbs">
+                    <button type="button" class="active gallery-placeholder" onclick="setGalleryImage('modal-character', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-character', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-character', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                </div>
+                <div class="modal-sections">
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.context">Contexte &amp; objectif</h3>
+                        <p data-i18n="character.modal.context">Création d'un personnage complet pour le remake du jeu Blue Stinger, avec un pipeline character-art complet incluant le costuming numérique.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.role">Mon rôle</h3>
+                        <p data-i18n="character.modal.role">Modélisation, sculpt, costuming numérique sous CLO3D et Marvelous Designer, et texturing du personnage en autonomie.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
+                        <ul>
+                            <li data-i18n="character.modal.li1">Base mesh &amp; sculpt</li>
+                            <li data-i18n="character.modal.li2">Costuming numérique (CLO3D / Marvelous Designer)</li>
+                            <li data-i18n="character.modal.li3">Texturing final</li>
+                        </ul>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.result">Résultat &amp; ce que j'en retiens</h3>
+                        <p data-i18n="character.modal.result">Un personnage intégré au jeu, qui démontre la maîtrise d'un pipeline character-art complet — de la base mesh au rendu final texturé.</p>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Character Creator</span>
+                            <span>Marvelous Designer</span>
+                            <span>Blender</span>
+                            <span>ZBrush</span>
+                            <span>Substance Painter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal MK18 -->
+    <div id="modal-mk18" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-mk18')">&times;</button>
+            <div class="modal-header">
+                <div class="cat" data-i18n="foxtrot.category">Metaverse · Projet Foxtrot — 2023-2025</div>
+                <h2 data-i18n="foxtrot.mk18.title">Asset Modulaire MK18</h2>
+                <p data-i18n="foxtrot.mk18.modal.intro">Asset hard surface entièrement modélisé sous Blender, avec structure modulaire pensée pour la personnalisation.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery-main gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                <div class="modal-gallery-thumbs">
+                    <button type="button" class="active gallery-placeholder" onclick="setGalleryImage('modal-mk18', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-mk18', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-mk18', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                </div>
+                <div class="modal-sections">
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.context">Contexte &amp; objectif</h3>
+                        <p data-i18n="foxtrot.mk18.modal.context">Asset hard surface conçu pour le projet Foxtrot, avec un objectif de modularité : chaque pièce démontable/assemblable indépendamment, pensé comme un système plutôt qu'un objet figé.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.role">Mon rôle</h3>
+                        <p data-i18n="foxtrot.mk18.modal.role">Modélisation complète et texturing de l'asset en autonomie.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
+                        <ul>
+                            <li data-i18n="foxtrot.mk18.modal.li1">Modélisation hard surface optimisée</li>
+                            <li data-i18n="foxtrot.mk18.modal.li2">Conception modulaire (démontage / assemblage)</li>
+                            <li data-i18n="foxtrot.mk18.modal.li3">Texturing réaliste</li>
+                        </ul>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.result">Résultat &amp; ce que j'en retiens</h3>
+                        <p data-i18n="foxtrot.mk18.modal.result">Un asset modulaire fonctionnel qui illustre ma maîtrise du hard surface et de la conception par système de pièces démontables — une logique proche de celle du design produit industriel.</p>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Blender</span>
+                            <span>Substance Painter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Smart Materials -->
+    <div id="modal-smartmat" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-smartmat')">&times;</button>
+            <div class="modal-header">
+                <div class="cat" data-i18n="foxtrot.category">Metaverse · Projet Foxtrot — 2023-2025</div>
+                <h2 data-i18n="foxtrot.smartmat.title">Smart Materials</h2>
+                <p data-i18n="foxtrot.smartmat.modal.intro">Conception de Smart Materials spécifiquement pour Foxtrot.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery-main gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                <div class="modal-gallery-thumbs">
+                    <button type="button" class="active gallery-placeholder" onclick="setGalleryImage('modal-smartmat', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-smartmat', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-smartmat', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                </div>
+                <div class="modal-sections">
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.context">Contexte &amp; objectif</h3>
+                        <p data-i18n="foxtrot.smartmat.modal.context">Constitution d'une bibliothèque de Smart Materials réutilisables pour l'ensemble des assets du projet Foxtrot, afin d'accélérer et d'harmoniser le texturing en équipe.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.role">Mon rôle</h3>
+                        <p data-i18n="foxtrot.smartmat.modal.role">Conception et production des Smart Materials sous Substance Painter, pensés pour être réutilisés par toute l'équipe.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
+                        <ul>
+                            <li data-i18n="foxtrot.smartmat.modal.li1">Analyse des besoins de texturing récurrents</li>
+                            <li data-i18n="foxtrot.smartmat.modal.li2">Production des Smart Materials</li>
+                            <li data-i18n="foxtrot.smartmat.modal.li3">Documentation pour l'équipe</li>
+                        </ul>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.result">Résultat &amp; ce que j'en retiens</h3>
+                        <p data-i18n="foxtrot.smartmat.modal.result">Une bibliothèque de matériaux qui a concrètement accéléré le travail de texturing de l'équipe — une première expérience de production d'outils réutilisables plutôt que d'assets uniques.</p>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Substance Painter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Avatar -->
+    <div id="modal-avatar" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-avatar')">&times;</button>
+            <div class="modal-header">
+                <div class="cat" data-i18n="foxtrot.category">Metaverse · Projet Foxtrot — 2023-2025</div>
+                <h2 data-i18n="foxtrot.avatar.title">Avatar Personnalisable</h2>
+                <p data-i18n="foxtrot.avatar.modal.intro">Modélisation lowpoly d'un avatar 3D avec parties personnalisables.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery-main gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                <div class="modal-gallery-thumbs">
+                    <button type="button" class="active gallery-placeholder" onclick="setGalleryImage('modal-avatar', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-avatar', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-avatar', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                </div>
+                <div class="modal-sections">
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.context">Contexte &amp; objectif</h3>
+                        <p data-i18n="foxtrot.avatar.modal.context">Conception d'un avatar personnalisable pour l'application Foxtrot, avec une contrainte forte de performance : le modèle devait rester léger pour fonctionner sur mobile.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.role">Mon rôle</h3>
+                        <p data-i18n="foxtrot.avatar.modal.role">Modélisation lowpoly, baking et optimisation du modèle pour respecter les contraintes de performance mobile.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
+                        <ul>
+                            <li data-i18n="foxtrot.avatar.modal.li1">Modélisation lowpoly</li>
+                            <li data-i18n="foxtrot.avatar.modal.li2">Baking des textures</li>
+                            <li data-i18n="foxtrot.avatar.modal.li3">Optimisation mobile</li>
+                            <li data-i18n="foxtrot.avatar.modal.li4">Parties personnalisables</li>
+                        </ul>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.result">Résultat &amp; ce que j'en retiens</h3>
+                        <p data-i18n="foxtrot.avatar.modal.result">Un avatar personnalisable et optimisé, intégré à l'application — un exercice concret d'équilibre entre qualité visuelle et contrainte technique de performance.</p>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Blender</span>
+                            <span>Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal UX/UI -->
+    <div id="modal-uxui" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-uxui')">&times;</button>
+            <div class="modal-header">
+                <div class="cat" data-i18n="foxtrot.category">Metaverse · Projet Foxtrot — 2023-2025</div>
+                <h2 data-i18n="foxtrot.uxui.title">UX/UI Design</h2>
+                <p data-i18n="foxtrot.uxui.modal.intro">Conception de l'interface utilisateur sur Figma.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery-main gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                <div class="modal-gallery-thumbs">
+                    <button type="button" class="active gallery-placeholder" onclick="setGalleryImage('modal-uxui', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-uxui', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-uxui', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                </div>
+                <div class="modal-sections">
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.context">Contexte &amp; objectif</h3>
+                        <p data-i18n="foxtrot.uxui.modal.context">Conception de l'interface utilisateur de l'application Foxtrot, avec un objectif de navigation intuitive sur mobile pour un public non technique.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.role">Mon rôle</h3>
+                        <p data-i18n="foxtrot.uxui.modal.role">Wireframing, prototypage et design de l'interface sous Figma, en lien avec l'équipe de développement.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
+                        <ul>
+                            <li data-i18n="foxtrot.uxui.modal.li1">Wireframing &amp; prototypage sur Figma</li>
+                            <li data-i18n="foxtrot.uxui.modal.li2">Optimisation UX/UI pour une utilisation intuitive</li>
+                            <li data-i18n="foxtrot.uxui.modal.li3">Design responsive adapté aux contraintes mobiles</li>
+                            <li data-i18n="foxtrot.uxui.modal.li4">Identité visuelle cohérente avec la cible</li>
+                        </ul>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.result">Résultat &amp; ce que j'en retiens</h3>
+                        <p data-i18n="foxtrot.uxui.modal.result">Une interface fonctionnelle et cohérente avec l'identité du projet — une expérience qui élargit mon profil au-delà de la 3D pure, vers la conception d'expérience utilisateur complète.</p>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Figma</span>
+                            <span>Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Marketing -->
+    <div id="modal-marketing" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal-marketing')">&times;</button>
+            <div class="modal-header">
+                <div class="cat" data-i18n="foxtrot.category">Metaverse · Projet Foxtrot — 2023-2025</div>
+                <h2 data-i18n="foxtrot.marketing.title">Assets Marketing</h2>
+                <p data-i18n="foxtrot.marketing.modal.intro">Conception d'assets marketing pour Instagram et Kickstarter.</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-gallery-main gallery-placeholder"><span data-i18n="common.soon">À venir</span></div>
+                <div class="modal-gallery-thumbs">
+                    <button type="button" class="active gallery-placeholder" onclick="setGalleryImage('modal-marketing', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-marketing', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                    <button type="button" class="gallery-placeholder" onclick="setGalleryImage('modal-marketing', '', this)"><span data-i18n="common.soon">À venir</span></button>
+                </div>
+                <div class="modal-sections">
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.context">Contexte &amp; objectif</h3>
+                        <p data-i18n="foxtrot.marketing.modal.context">Production d'assets visuels pour accompagner la campagne de financement Kickstarter du projet Foxtrot et sa communication sur les réseaux sociaux.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.role">Mon rôle</h3>
+                        <p data-i18n="foxtrot.marketing.modal.role">Conception des visuels marketing en cohérence avec le planning de campagne et l'identité de marque du projet.</p>
+                    </div>
+                    <div class="modal-details">
+                        <h3 data-i18n="common.steps">Étapes clés</h3>
+                        <ul>
+                            <li data-i18n="foxtrot.marketing.modal.li1">Respect d'un planning marketing</li>
+                            <li data-i18n="foxtrot.marketing.modal.li2">Posts &amp; stories pour la campagne Kickstarter</li>
+                            <li data-i18n="foxtrot.marketing.modal.li3">Assets expliquant les différentes fonctionnalités</li>
+                            <li data-i18n="foxtrot.marketing.modal.li4">Cohérence visuelle &amp; branding</li>
+                        </ul>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.result">Résultat &amp; ce que j'en retiens</h3>
+                        <p data-i18n="foxtrot.marketing.modal.result">Des assets utilisés dans la campagne réelle du projet — une expérience qui montre ma capacité à adapter mon travail 3D à des besoins de communication concrets et à des délais de campagne.</p>
+                    </div>
+                    <div class="modal-details modal-section-full">
+                        <h3 data-i18n="common.tools">Outils utilisés</h3>
+                        <div class="modal-tags">
+                            <span>Figma</span>
+                            <span>Kickstarter</span>
+                            <span>Instagram</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="translations.js?v=20260825"></script>
+    <script src="script.js?v=20260825"></script>
 </body>
 </html>
