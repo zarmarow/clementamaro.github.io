@@ -2,14 +2,14 @@ var translations = {
     fr: {
         "nav.home": "Accueil",
         "nav.about": "À propos",
-        "nav.produit": "Design Produit",
+        "nav.produit": "Design",
         "nav.3d": "Infographie 3D",
         "nav.contact": "Contact",
 
         "hero.tag": "Disponible immédiatement — CDD / CDI",
-        "hero.subtitle": "Design Produit & Infographie 3D",
+        "hero.subtitle": "Design & Infographie 3D",
         "hero.description": "Je conçois des objets et des univers, du croquis à la fabrication physique, du modèle temps réel au rendu photoréaliste. Deux pratiques, une même exigence : la faisabilité, les matériaux et la confrontation au réel — physique ou numérique.",
-        "hero.btn1": "Design Produit",
+        "hero.btn1": "Design",
         "hero.btn2": "Infographie 3D",
 
         "about.num": "(01) — À PROPOS",
@@ -27,7 +27,7 @@ var translations = {
         "skills.5": "Pipeline Temps Réel",
         "skills.6": "Gestion de Projet",
 
-        "produit.num": "(02) — DESIGN PRODUIT",
+        "produit.num": "(02) — DESIGN",
         "produit.title": "Conceptions<br><em>tangibles.</em>",
 
         "common.view": "Voir le projet",
@@ -39,7 +39,7 @@ var translations = {
         "common.soon": "À venir",
 
         "safran.badge": "Confidentiel",
-        "safran.category": "Design Produit — Safran Seats, 2026",
+        "safran.category": "Design — Safran Seats, 2026",
         "safran.title": "Stagiaire Design & Visualisation 3D",
         "safran.desc": "Stage en design et visualisation 3D dans l'aéronautique. Contenu confidentiel — détails disponibles sur demande.",
         "safran.tag1": "Visualisation 3D",
@@ -53,9 +53,9 @@ var translations = {
         "safran.modal.footer": "Détails complets disponibles sur demande, dans le respect des règles de confidentialité de l'entreprise.",
         "safran.modal.context": "Stage de fin d'études au sein du bureau d'études de Safran Seats, sur des missions de design et de visualisation 3D appliquées à des équipements aéronautiques, secteur soumis à des normes de certification strictes.",
         "safran.modal.role": "Support de design et visualisation 3D en collaboration directe avec les équipes ingénierie, avec des propositions de conception intégrant dès l'amont les contraintes normatives et industrielles.",
-        "safran.modal.result": "Expérience d'un design exercé sous forte contrainte, où la créativité s'exprime dans la résolution du problème technique plutôt que dans sa mise de côté. Rigueur normative et capacité de proposition : deux compétences directement transférables au design produit.",
+        "safran.modal.result": "Expérience d'un design exercé sous forte contrainte, où la créativité s'exprime dans la résolution du problème technique plutôt que dans sa mise de côté. Rigueur normative et capacité de proposition : deux compétences directement transférables au design.",
 
-        "ebenisterie.category": "Design Produit — Fabrication",
+        "ebenisterie.category": "Design — Fabrication",
         "ebenisterie.title": "Ébénisterie",
         "ebenisterie.desc": "Conception et fabrication d'un meuble, de la modélisation à l'assemblage final.",
         "ebenisterie.tag2": "Fabrication bois",
@@ -67,7 +67,7 @@ var translations = {
         "ebenisterie.modal.li4": "Fabrication et finition du meuble",
         "ebenisterie.modal.context": "Projet personnel visant à sortir du tout-numérique et à confronter une conception à la réalité physique de la fabrication : contraintes de matériaux, d'assemblage et d'outillage.",
         "ebenisterie.modal.role": "Conception complète en solo, de l'idée au meuble fini : design, plans techniques, choix des matériaux, découpe et assemblage.",
-        "ebenisterie.modal.result": "Un meuble fonctionnel et livré, qui m'a appris à concevoir en intégrant dès le départ les contraintes réelles de fabrication — une discipline que je retrouve directement utile en design produit.",
+        "ebenisterie.modal.result": "Un meuble fonctionnel et livré, qui m'a appris à concevoir en intégrant dès le départ les contraintes réelles de fabrication — une discipline que je retrouve directement utile en design.",
 
         "espace.category": "Design d'Intérieur",
         "espace.title": "Rendu d'espace",
@@ -82,7 +82,7 @@ var translations = {
         "espace.modal.role": "Conception de l'espace et exécution complète du rendu, du modeling à l'éclairage final.",
         "espace.modal.result": "Un rendu photoréaliste maîtrisé de bout en bout, qui démontre ma capacité à gérer l'éclairage et la mise en scène d'un espace — compétence directement utile pour de la visualisation produit en contexte professionnel.",
 
-        "dispenser.category": "Design Produit — Blue Stinger Remake",
+        "dispenser.category": "Design — Blue Stinger Remake",
         "dispenser.title": "Food Dispenser",
         "dispenser.desc": "Modélisation d'un objet produit, de la recherche de références au texturing final.",
         "dispenser.tag1": "Hard Surface",
@@ -154,7 +154,7 @@ var translations = {
         "foxtrot.mk18.modal.li3": "Texturing réaliste",
         "foxtrot.mk18.modal.context": "Asset hard surface conçu pour le projet Foxtrot, avec un objectif de modularité : chaque pièce démontable/assemblable indépendamment, pensé comme un système plutôt qu'un objet figé.",
         "foxtrot.mk18.modal.role": "Modélisation complète et texturing de l'asset en autonomie.",
-        "foxtrot.mk18.modal.result": "Un asset modulaire fonctionnel qui illustre ma maîtrise du hard surface et de la conception par système de pièces démontables — une logique proche de celle du design produit industriel.",
+        "foxtrot.mk18.modal.result": "Un asset modulaire fonctionnel qui illustre ma maîtrise du hard surface et de la conception par système de pièces démontables — une logique proche de celle du design d'objet.",
 
         "foxtrot.smartmat.title": "Smart Materials",
         "foxtrot.smartmat.desc": "Bibliothèque de matériaux pour accélérer le texturing.",
@@ -211,14 +211,14 @@ var translations = {
     en: {
         "nav.home": "Home",
         "nav.about": "About",
-        "nav.produit": "Product Design",
+        "nav.produit": "Design",
         "nav.3d": "3D Art",
         "nav.contact": "Contact",
 
         "hero.tag": "Available immediately — Fixed-term / Permanent",
-        "hero.subtitle": "Product Design & 3D Art",
+        "hero.subtitle": "Design & 3D Art",
         "hero.description": "I design objects and worlds, from sketch to physical fabrication, from real-time model to photorealistic render. Two practices, one same standard: feasibility, materials, and confronting reality — physical or digital.",
-        "hero.btn1": "Product Design",
+        "hero.btn1": "Design",
         "hero.btn2": "3D Art",
 
         "about.num": "(01) — ABOUT",
@@ -236,7 +236,7 @@ var translations = {
         "skills.5": "Real-Time Pipeline",
         "skills.6": "Project Management",
 
-        "produit.num": "(02) — PRODUCT DESIGN",
+        "produit.num": "(02) — DESIGN",
         "produit.title": "Tangible<br><em>designs.</em>",
 
         "common.view": "View project",
@@ -248,7 +248,7 @@ var translations = {
         "common.soon": "Coming soon",
 
         "safran.badge": "Confidential",
-        "safran.category": "Product Design — Safran Seats, 2026",
+        "safran.category": "Design — Safran Seats, 2026",
         "safran.title": "Design & 3D Visualization Intern",
         "safran.desc": "Internship in design and 3D visualization in aerospace. Confidential content — details available on request.",
         "safran.tag1": "3D Visualization",
@@ -262,9 +262,9 @@ var translations = {
         "safran.modal.footer": "Full details available on request, in accordance with the company's confidentiality rules.",
         "safran.modal.context": "Final-year internship within Safran Seats' engineering design office, on design and 3D visualization missions applied to aerospace equipment, an industry subject to strict certification standards.",
         "safran.modal.role": "Design and 3D visualization support working directly with engineering teams, contributing design proposals that account for regulatory and industrial constraints from the outset.",
-        "safran.modal.result": "An experience of design practiced under strong constraints, where creativity shows in solving the technical problem rather than setting it aside. Regulatory rigor and the ability to propose solutions: two skills directly transferable to product design.",
+        "safran.modal.result": "An experience of design practiced under strong constraints, where creativity shows in solving the technical problem rather than setting it aside. Regulatory rigor and the ability to propose solutions: two skills directly transferable to design.",
 
-        "ebenisterie.category": "Product Design — Woodworking",
+        "ebenisterie.category": "Design — Woodworking",
         "ebenisterie.title": "Woodworking",
         "ebenisterie.desc": "Design and manufacturing of a piece of furniture, from modeling to final assembly.",
         "ebenisterie.tag2": "Wood Manufacturing",
@@ -276,7 +276,7 @@ var translations = {
         "ebenisterie.modal.li4": "Manufacturing and finishing of the furniture",
         "ebenisterie.modal.context": "Personal project aimed at stepping away from all-digital work and confronting a design with the physical reality of manufacturing: material, assembly, and tooling constraints.",
         "ebenisterie.modal.role": "Full solo design, from concept to finished furniture: design, technical drawings, material selection, cutting and assembly.",
-        "ebenisterie.modal.result": "A functional, delivered piece of furniture that taught me to design with real manufacturing constraints in mind from the start — a discipline directly useful in product design.",
+        "ebenisterie.modal.result": "A functional, delivered piece of furniture that taught me to design with real manufacturing constraints in mind from the start — a discipline directly useful in design.",
 
         "espace.category": "Interior Design",
         "espace.title": "Space Rendering",
@@ -291,7 +291,7 @@ var translations = {
         "espace.modal.role": "Design of the space and full execution of the render, from modeling to final lighting.",
         "espace.modal.result": "A fully mastered photorealistic render, demonstrating my ability to handle lighting and staging of a space — a skill directly useful for product visualization in a professional context.",
 
-        "dispenser.category": "Product Design — Blue Stinger Remake",
+        "dispenser.category": "Design — Blue Stinger Remake",
         "dispenser.title": "Food Dispenser",
         "dispenser.desc": "Modeling of a product object, from reference research to final texturing.",
         "dispenser.tag1": "Hard Surface",
@@ -363,7 +363,7 @@ var translations = {
         "foxtrot.mk18.modal.li3": "Realistic texturing",
         "foxtrot.mk18.modal.context": "Hard surface asset designed for the Foxtrot project, with a modularity goal: each part independently disassembled/assembled, designed as a system rather than a fixed object.",
         "foxtrot.mk18.modal.role": "Full modeling and texturing of the asset, done independently.",
-        "foxtrot.mk18.modal.result": "A functional modular asset showing my mastery of hard surface work and system-based design of detachable parts — a logic close to industrial product design.",
+        "foxtrot.mk18.modal.result": "A functional modular asset showing my mastery of hard surface work and system-based design of detachable parts — a logic close to that of object design.",
 
         "foxtrot.smartmat.title": "Smart Materials",
         "foxtrot.smartmat.desc": "Material library to speed up texturing.",
