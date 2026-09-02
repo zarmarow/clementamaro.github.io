@@ -421,7 +421,7 @@ section { padding: 120px 40px; }
 
 /* Galerie */
 .modal-gallery-main {
-    width: 100%; aspect-ratio: 16/9;
+    width: 100%; aspect-ratio: 4/3;
     background: var(--ink);
     border-radius: 4px;
     background-size: cover; background-position: center;
@@ -432,7 +432,7 @@ section { padding: 120px 40px; }
     padding-bottom: 4px;
 }
 .modal-gallery-thumbs button {
-    flex: 0 0 100px; aspect-ratio: 16/9;
+    flex: 0 0 100px; aspect-ratio: 4/3;
     background: var(--ink); background-size: cover; background-position: center;
     border-radius: 3px; border: 2px solid transparent;
     cursor: pointer; padding: 0; opacity: 0.6;
