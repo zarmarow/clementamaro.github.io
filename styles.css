@@ -682,9 +682,9 @@ section { padding: 120px 40px; }
     animation: blobDrift 14s ease-in-out infinite alternate;
 }
 .hero::after {
-    width: 500px; height: 500px; bottom: -160px; right: -100px;
-    background: radial-gradient(circle, var(--accent-2) 0%, transparent 70%);
-    opacity: 0.35;
+    width: 500px; height: 500px; bottom: 30px; right: -100px;
+    background: radial-gradient(circle, var(--accent-2) 0%, transparent 65%);
+    opacity: 0.22;
     transform: translate(calc(var(--mx) * -1px), calc(var(--my) * -1px));
     animation: blobDrift 18s ease-in-out infinite alternate-reverse;
 }
