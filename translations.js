@@ -12,13 +12,6 @@ var translations = {
         "hero.btn1": "Design Produit",
         "hero.btn2": "Infographie 3D",
 
-        "marquee.1": "Design Produit",
-        "marquee.2": "CAO & NURBS",
-        "marquee.3": "Rendu Photoréaliste",
-        "marquee.4": "Prototypage Physique",
-        "marquee.5": "Modélisation Temps Réel",
-        "marquee.6": "Contraintes de Fabrication",
-
         "about.num": "(01) — À PROPOS",
         "about.title": "Deux pratiques,<br><em>une même méthode.</em>",
         "about.p1": "Designer produit et infographiste 3D, je conçois de l'idée à l'objet fini — que cet objet soit physique ou destiné au temps réel. Sketch, modélisation 3D, CAO, rendu, prototypage : je maîtrise l'ensemble de la chaîne.",
@@ -227,13 +220,6 @@ var translations = {
         "hero.description": "I design objects and worlds, from sketch to physical fabrication, from real-time model to photorealistic render. Two practices, one same standard: feasibility, materials, and confronting reality — physical or digital.",
         "hero.btn1": "Product Design",
         "hero.btn2": "3D Art",
-
-        "marquee.1": "Product Design",
-        "marquee.2": "CAD & NURBS",
-        "marquee.3": "Photorealistic Rendering",
-        "marquee.4": "Physical Prototyping",
-        "marquee.5": "Real-Time Modeling",
-        "marquee.6": "Manufacturing Constraints",
 
         "about.num": "(01) — ABOUT",
         "about.title": "Two practices,<br><em>one method.</em>",

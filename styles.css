@@ -165,19 +165,6 @@ h2 em { font-style: italic; color: var(--muted); }
     transform: translateY(-3px);
 }
 
-/* Marquee */
-.marquee {
-    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-    overflow: hidden; padding: 24px 0; background: var(--ink); color: var(--bg);
-}
-.marquee-track {
-    display: flex; gap: 60px; white-space: nowrap; animation: scroll 30s linear infinite;
-    font-family: 'Instrument Serif', serif; font-size: 36px; font-style: italic;
-}
-.marquee-track span { display: flex; align-items: center; gap: 60px; }
-.marquee-track span::after { content: '✦'; color: var(--accent); font-style: normal; }
-@keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
 /* Sections General */
 section { padding: 120px 40px; }
 
@@ -757,15 +744,6 @@ section { padding: 120px 40px; }
     transition: opacity 0.3s;
 }
 .btn:hover::after { opacity: 0.5; }
-
-/* Marquee : mots en dégradé chaud, légère bascule au survol */
-.marquee-track span {
-    background: linear-gradient(90deg, var(--bg) 0%, var(--accent) 50%, var(--bg) 100%);
-    -webkit-background-clip: text; background-clip: text;
-    transition: color 0.3s;
-}
-.marquee:hover .marquee-track { animation-play-state: paused; }
-.marquee-track span::after { color: var(--accent-2); }
 
 /* Bloc "profil hybride" : accent diagonal façon papier découpé */
 .reorientation-box {
