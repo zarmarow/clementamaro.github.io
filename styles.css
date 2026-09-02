@@ -2,10 +2,10 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-    /* CHARTE GRAPHIQUE CRÈME & VERT LIME */
+    /* CHARTE GRAPHIQUE CRÈME & VIOLET/CYAN */
     --bg: #EDEAE3;       /* Fond crème */
     --ink: #0E0E0E;      /* Texte noir profond */
-    --accent: #D4FF3A;   /* Vert lime électrique */
+    --accent: #7C5CFF;   /* Violet électrique */
     --muted: #6B6B6B;    /* Gris moyen */
     --line: rgba(14,14,14,0.12); /* Lignes fines */
     --white: #ffffff;
@@ -484,7 +484,7 @@ section { padding: 120px 40px; }
 .modal-gallery-thumbs button.gallery-placeholder span { font-size: 9px; padding: 2px 6px; }
 
 .draft-notice {
-    background: rgba(212,255,58,0.12); border: 1px dashed var(--accent);
+    background: rgba(124,92,255,0.12); border: 1px dashed var(--accent);
     border-radius: 4px; padding: 10px 14px; margin-bottom: 24px;
     font-size: 12px; color: var(--ink); letter-spacing: 0.3px;
 }
@@ -563,7 +563,7 @@ section { padding: 120px 40px; }
     border: 1px solid var(--line); border-radius: 4px;
     transition: border-color 0.3s, background 0.3s;
 }
-.subproject-item:hover { border-color: var(--accent); background: rgba(212,255,58,0.06); }
+.subproject-item:hover { border-color: var(--accent); background: rgba(124,92,255,0.06); }
 .subproject-thumb {
     aspect-ratio: 4/3; border-radius: 3px; background-size: cover; background-position: center;
     background-color: var(--ink);
@@ -605,8 +605,8 @@ section { padding: 120px 40px; }
    ================================================================ */
 
 :root {
-    --accent-2: #FF6B4A; /* corail chaud */
-    --accent-3: #8B7CFF; /* violet doux */
+    --accent-2: #2FD1C0; /* cyan turquoise */
+    --accent-3: #B4A6FF; /* lavande claire */
     --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -749,7 +749,7 @@ section { padding: 120px 40px; }
 .reorientation-box {
     position: relative;
     transform: rotate(-0.4deg);
-    box-shadow: 10px 10px 0 rgba(212,255,58,0.15);
+    box-shadow: 10px 10px 0 rgba(124,92,255,0.15);
 }
 .reorientation-box::before {
     content: '';
