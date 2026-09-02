@@ -771,17 +771,6 @@ section { padding: 120px 40px; }
 .project-card { transition: transform 0.4s ease; }
 .project-card:hover { transform: translateY(-8px); }
 
-.project-card::before {
-    content: '✦';
-    position: absolute; top: -14px; right: 12px;
-    font-family: 'Instrument Serif', serif; font-size: 22px;
-    color: var(--accent-2);
-    opacity: 0; transform: scale(0.6) rotate(-20deg);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 2; pointer-events: none;
-}
-.project-card:hover::before { opacity: 1; transform: scale(1) rotate(0deg); }
-
 .tags span { transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease; }
 .tags span:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 
