@@ -200,7 +200,7 @@ section { padding: 120px 40px; }
 
 /* Projects Grid */
 .projects-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
     gap: 60px 40px;
 }
 
@@ -554,7 +554,7 @@ section { padding: 120px 40px; }
 
 /* Mega-project sub-items (Foxtrot) */
 .subprojects-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
     gap: 20px; margin-top: 16px;
 }
 .subproject-item {
